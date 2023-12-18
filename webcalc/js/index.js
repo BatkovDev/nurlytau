@@ -1,6 +1,7 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 
+console.log("worked");
 const scene = new THREE.Scene();
 const canvas = document.querySelector('.canvas');
 
