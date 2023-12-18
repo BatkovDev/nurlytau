@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html, body {
+    overflow: hidden;
+}
+
+.canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu{
+    
+    position: fixed;
+    z-index: 2;
+    bottom:0;
+    left: 0;
+    right: 0;
+    
+    height: 20%;
+    
+    background-color: rgb(188, 188, 188);
+    
+}
+.r{
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+.l{
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 10px;
+}
+.n{
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+h4{
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+text{
+    padding-left: 5%;
+    background-color: azure;
+}

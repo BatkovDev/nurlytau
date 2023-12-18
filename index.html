@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas class="canvas"></canvas>
+        <div class="menu">
+          
+          <div>
+            <div class="r">Размеры дома:</div>
+            <div class="r">
+              <div>Длина(m)</div>
+              <input name="L" type="number" min="1" max="300" class="length" value="4">
+            </div>
+            <div class="r">
+              <div>Ширина(m)</div>
+              <input name="L" type="number" min="1" max="300" class="width" value="2" >
+            </div>
+            <div class="r">
+              <div>Высота(m)</div>
+              <input name="L" type="number" min="1" max="300" class="height" value="1">
+            </div>
+            <div class="r">
+              <div>Уклон кровли(°)</div>
+              <input name="L" type="number" min="2"  class="corner" value="90">
+            </div>
+            <div class="l">или</div>
+            <div class="l">
+              <div>Высота в коньке(m)</div>
+              <input name="L" type="number" min="1"  class="heightkonke" value="1">
+            </div>
+            <div class="r">Размеры сэндвич панелей:</div>
+            <div class="r">
+              <div>Ширина(sm)</div>
+              <input name="L" type="number" min="0" max="90" class="widthpanel" value="2">
+            </div>
+            <div class="r">
+              <div>Высота(sm)</div>
+              <input name="L" type="number" min="0" max="90" class="heightpanel" value="5">
+            </div>
+            
+            <div class="n">
+              <button>push</button>
+            </div>           
+            <div>
+              <h4>плиток:</h4>
+            </div> 
+            
+          </div>
+          
+        </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
