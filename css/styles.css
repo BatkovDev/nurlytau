@@ -3,7 +3,6 @@
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
-	color: #E8E8E8;
 	font-family: 'Poppins', Arial;
 }
 ul {
@@ -757,7 +756,7 @@ body {
 
 .fsection__title {
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 22px;
 	color: #E8E8E8;
 }
 
@@ -765,13 +764,15 @@ body {
 .fsection__list li {}
 
 .fs_link {
-	color: #12326e;
+	font-size: 18px;
+	color: #8B8B8C;
 }
 .fs_link a {
-	color: #12326e;
+	color: inherit;
 }
 
 .fs_text {
+	font-size: 18px;
 	color: #E8E8E8;
 }
 
