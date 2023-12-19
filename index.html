@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NurlyTau</title>
 	<link rel="stylesheet" href="css/preloader.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 </head>
 <body>
-	<!-- <div class="preloader" id="preloader">
+	<div class="preloader" id="preloader">
 		<div class="preloader__load-percents"><span>0</span>%</div>
 		<div aria-busy="true" aria-label="Loading" role="progressbar" class="preloader__loader">
 			<div class="preloader__swing">
@@ -30,7 +32,7 @@
 				<div class="preloader__shadow-r"></div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 
 
 	<div class="header">
@@ -63,9 +65,9 @@
 		<div>
 			<div class="nav">
 				<ul>
-					<li><a href="#">О нас</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Наши работы</a></li>
+					<li><a href="#about-us">О нас</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+					<li><a href="#projects">Наши проекты</a></li>
 				</ul>
 			</div>
 
@@ -94,8 +96,21 @@
 			</div>
 		</div>
 	</div>
+	<div class="calculator">
+		<div class="calculator-wrap">
+			<div class="calc-description">Проектирование и расчет стоимости здания онлайн.</div>
+			<div class="calc-link"><a href="webcalc/index.html">Калькулятор <iconify-icon icon="icon-park-solid:click"></iconify-icon></a></div>
+		</div>
+	</div>
 
-	<div class="about-us">
+	<div class="sandwich-panels">
+		<div class="sp-content">
+			<div class="sp__title">Что такое <span>Сэндвич-панели</span></div>
+			<div class="sp__description"><span>Сэндвич-панели</span> — инновационный строительный материал, широко используемый в современном строительстве зданий. Этот материал из двух листов профилированного металла и слоя утеплителя между ними, которые плотно и накрепко склеиваются между собой, с помощью горячего или холодного прессования.</div>
+		</div>
+	</div>
+
+	<div class="about-us" id="about-us">
 		<div class="about-header"><span>О нас</span></div>
 
 		<div class="about-us__container">
@@ -173,7 +188,7 @@
 		</div>
 	</div>
 
-	<div class="projects">
+	<div class="projects" id="projects">
 		<div class="projects-header">Наши проекты</div>
 
 		<div class="projects__section">
@@ -295,7 +310,7 @@
 	<div class="modal" id="myModal">
 		<div class="modal-container">
 	    <div class="modal-header">
-	      <div class="modal-title">СТО CAR CITY</div>
+	      <div class="modal-title">...</div>
 	      <button class="modal-close">×</button>
 	    </div>
 	    <div class="modal-content">
@@ -309,26 +324,28 @@
 
 
 	<footer class="footer">
-		<div class="footer-wrapper">
-			<div class="footer-section" style="grid-row: 1; grid-column: 1;">
+		<div class="footer-wrapper"><!-- 
+			<div class="footer-section">
+				<a href="#" class="fs_logo"><img src="img/logo2.png"></a>
+			</div> -->
+			<div class="footer-section">
 				<div class="fsection__title">Навигация сайта</div>
 				<ul class="fsection__list">
 					<li class="fs_link"><a href="#">О нас</a></li>
-					<li class="fs_link"><a href="#">Наши работы</a></li>
-				</ul>
-			</div>
-			<div class="footer-section" style="grid-row: 1; grid-column: 2;">
-				<a href="#" class="fs_logo"><img src="img/logo2.png"></a>
-				<ul class="fsection__list">
-					<li class="fs_text">ТОО NURLY TAU - строительная компания.</li>
-					<li class="fs_text">г. Кокшетау, улица ффф 00</li>
-					<li class="fs_link"><a href="#">ya maps</a></li>
+					<li class="fs_link"><a href="#">Наши проекты</a></li>
 				</ul>
 			</div>
 			<div class="footer-section">
 				<div class="fsection__title">Система</div>
 				<ul class="fsection__list">
 					<li class="fs_link"><a href="webcalc/index.html">Калькулятор для расчета зданий</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<ul class="fsection__list">
+					<li class="fsection__title">Местоположение</li>
+					<li class="fs_text">г. Кокшетау, улица ффф 00</li>
+					<li class="fs_link"><a href="#">ya maps</a></li>
 				</ul>
 			</div>
 			<div class="footer-section">
@@ -341,10 +358,9 @@
 					<li class="fs_social-link"><a href="#"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
 				</ul>
 			</div>
-
-			<div class="footer-section" style="grid-column: 2 span;">
-				<p>&copy; 2023 ТОО NURLY TAU CONSTRUCTION. Все права защищены.</p>
-			</div>
+		</div>
+		<div class="footer-powered" style="grid-row: 2;grid-column: span;">
+			<p>© 2023 ТОО NURLY TAU CONSTRUCTION. Все права защищены.</p>
 		</div>
 	</footer>
 
