@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.projects__block').forEach(function (block) {
-    block.querySelector("#projects_button, .projects__block-img").addEventListener('click', function () {
+    block.querySelector("#projects_button").addEventListener('click', function () {
       imagesArray = [];
       currentSlideIndex = 0;
       projectBlock = block;
