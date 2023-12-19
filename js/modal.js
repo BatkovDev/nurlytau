@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateImagesArray() {
     imagesArray = [];
-
     const sliderImage = projectBlock.querySelector('.projects__block-img img').src;
     imagesArray.push(sliderImage);
 
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const thumbnailImages = Array.from(thumbnailsBlock.querySelectorAll('img')).map(img => img.src);
       imagesArray.push(...thumbnailImages);
     }
-
     updateSlider();
   }
 
@@ -31,24 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
     thumbnailsContainer.innerHTML = '';
 
     imagesArray.forEach(function (image, index) {
-    const thumbnail = document.createElement('div');
-    thumbnail.classList.add('thumbnail');
-    thumbnail.innerHTML = `<img src="${image}" alt="Thumbnail ${index + 1}">`;
-    thumbnail.addEventListener('click', function (event) {
-      event.stopPropagation();
-      changeSlide(index);
+      const thumbnail = document.createElement('div');
+      thumbnail.classList.add('thumbnail');
+      thumbnail.innerHTML = `<img src="${image}" alt="Thumbnail ${index+1}">`;
+      thumbnail.addEventListener('click', function (event) {
+        event.stopPropagation();
+        changeSlide(index);
+      });
+      thumbnailsContainer.appendChild(thumbnail);
     });
-    thumbnailsContainer.appendChild(thumbnail);
-  });
 
-  if (imagesArray.length > 0) {
-    const slide = document.createElement('div');
-    slide.classList.add('slide');
-    slide.innerHTML = `<img src="${imagesArray[currentSlideIndex]}" alt="Slide ${currentSlideIndex + 1}">`;
-    slider.appendChild(slide);
+    if (imagesArray.length > 0) {
+      const slide = document.createElement('div');
+      slide.classList.add('slide');
+      slide.innerHTML = `<img src="${imagesArray[currentSlideIndex]}" alt="Slide">`;
+      slider.appendChild(slide);
 
-    showSlide(currentSlideIndex);
-  }
+      showSlide(currentSlideIndex);
+    }
   }
 
   function showSlide(index) {
@@ -68,13 +66,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.projects__block').forEach(function (block) {
-    block.addEventListener('click', function () {
+    block.querySelector("#projects_button, .projects__block-img").addEventListener('click', function () {
       imagesArray = [];
+      currentSlideIndex = 0;
       projectBlock = block;
       updateImagesArray();
       updateModalTitle();
-      console.log(imagesArray);
-      console.log(document.querySelector('.modal-content .slider .slide img'));
+      // console.log(imagesArray);
+      // console.log(document.querySelector('.modal-content .slider .slide img'));
       document.querySelector('.modal').classList.add('active');
     });
   });
@@ -83,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalContent = document.querySelector('.modal-container .modal-content');
     if (!modalContent.contains(event.target) && !event.target.classList.contains('modal-content')) {
       imagesArray = [];
+      currentSlideIndex = 0;
       document.querySelector('.modal').classList.remove('active');
     }
   });
