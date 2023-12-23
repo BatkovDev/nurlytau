@@ -7,10 +7,11 @@
 	<title>NurlyTau</title>
 	<link rel="stylesheet" href="css/preloader.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 </head>
 <body>
-	<div class="preloader" id="preloader">
+	<!-- <div class="preloader" id="preloader">
 		<div class="preloader__load-percents"><span>0</span>%</div>
 		<div aria-busy="true" aria-label="Loading" role="progressbar" class="preloader__loader">
 			<div class="preloader__swing">
@@ -32,36 +33,80 @@
 				<div class="preloader__shadow-r"></div>
 			</div>
 		</div>
+	</div> -->
+
+	<div class="responsive-nav rnav">
+		<div class="rnav-wrap">
+			<a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
+
+			<button class="burger-btn">o</button>
+		</div>
+
+		<div class="burger-menu">
+			<ul>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#">Наши проекты</a></li>
+			</ul>
+			<ul>
+				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> +7 (777) 777-7777</a></li>
+				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> example@example.com</a></li>
+				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
+			</ul>
+		</div>
 	</div>
 
-
 	<div class="header">
-		<ul class="circles">
-			<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:axe-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:hammer-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:building-2-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:axe-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:pickax-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:building-2-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
-			<li><iconify-icon icon="mingcute:hammer-fill"></iconify-icon></li>
-		</ul>
-		<img class="logo-bg" src="img/bg-2.jpg">
-		<div class="header-container">
-			<div class="header-container__left">
-				<div class="logo">
-					<img src="img/logo2.png">
+		<div class="header-wrap">
+			<ul class="circles">
+				<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:axe-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:hammer-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:building-2-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:axe-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:pickax-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:building-2-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
+				<li><iconify-icon icon="mingcute:hammer-fill"></iconify-icon></li>
+			</ul>
+			<div class="header__bar">
+				<a href="#" class="header-bar__logo"><img src="img/logo2.png"></a>
+
+				<div class="header-bar__contacts">
+					<div class="header-bar__contact __contacts-phone">
+						<div class="icon"><iconify-icon icon="bi:telephone-fill"></iconify-icon></div>
+						<div class="c-details">
+							<span class="__title">+7 (777) 777-7777</span>
+							<span class="__description">Позвонить</span>
+						</div>
+					</div>
+
+					<div class="header-bar__contact __contacts-mail">
+						<div class="icon"><iconify-icon icon="bi:envelope-fill"></iconify-icon></div>
+						<div class="c-details">
+							<span class="__title">example@example.com</span>
+							<span class="__description">Напишите нам</span>
+						</div>
+					</div>
+
+					<div class="header-bar__contact __contacts-geo">
+						<div class="icon"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon></div>
+						<div class="c-details">
+							<span class="__title">г. Кокшетау, ул. Центральный 41б, 10 этаж</span>
+							<span class="__description">Центральный офис</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="header-container__right">
-				<img src="img/bg-1.png">
+
+			<div class="header-container">
+				<h1 class="__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, ad et ullam.</h1>
 			</div>
 		</div>
 	</div>
 	
-	<div class="container">
+	<div class="nav-quality-container">
 		<div>
 			<div class="nav">
 				<ul>
@@ -71,11 +116,8 @@
 				</ul>
 			</div>
 
-			<div class="block-img">
-				<img src="img/ris1.png">
-				<div class="logotype">
-					<img src="img/logo-3.png">
-				</div>
+			<div class="block-left-content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis quam fugit, tenetur. Dicta a minus consequatur corporis dolorum dolores laborum. Consequatur, velit dolore perspiciatis doloremque asperiores consectetur itaque, harum, sed dolorem rem sunt pariatur sequi quo aliquid quas accusantium vel quasi fugiat ullam. Sint, corrupti, doloribus. Neque iure porro, ut.
 			</div>
 		</div>
 
@@ -96,22 +138,24 @@
 			</div>
 		</div>
 	</div>
-	<div class="calculator">
-		<div class="calculator-wrap">
-			<div class="calc-description">Проектирование и расчет стоимости здания онлайн.</div>
-			<div class="calc-link"><a href="webcalc/index.html">Калькулятор <iconify-icon icon="icon-park-solid:click"></iconify-icon></a></div>
+	<div class="questions">
+		<div class="calculator">
+			<div class="calculator-wrap">
+				<div class="calc-description">Проектирование и расчет стоимости здания онлайн.</div>
+				<div class="calc-link"><a href="webcalc/index.html">Калькулятор <iconify-icon icon="icon-park-solid:click"></iconify-icon></a></div>
+			</div>
+		</div>
+
+		<div class="sandwich-panels">
+			<div class="sp-content">
+				<div class="sp__title">Что такое <span>Сэндвич-панели</span></div>
+				<div class="sp__description"><span>Сэндвич-панели</span> — инновационный строительный материал, широко используемый в современном строительстве зданий. Этот материал из двух листов профилированного металла и слоя утеплителя между ними, которые плотно и накрепко склеиваются между собой, с помощью горячего или холодного прессования.</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="sandwich-panels">
-		<div class="sp-content">
-			<div class="sp__title">Что такое <span>Сэндвич-панели</span></div>
-			<div class="sp__description"><span>Сэндвич-панели</span> — инновационный строительный материал, широко используемый в современном строительстве зданий. Этот материал из двух листов профилированного металла и слоя утеплителя между ними, которые плотно и накрепко склеиваются между собой, с помощью горячего или холодного прессования.</div>
-		</div>
-	</div>
 
 	<div class="about-us" id="about-us">
-		<div class="about-header"><span>О нас</span></div>
 
 		<div class="about-us__container">
 
@@ -135,31 +179,34 @@
 			</div>
 
 			<div class="about-us__details">
-				<div class="about-block about-company">
-					<div class="about-block-header">О компании</div>
-					<div class="section">
-						<p>Строительная компания <span class="cit">ТОО «NURLYTAU CONSTRUCTION»</span>  уже более 15 лет на рынке (с 2008 года) успешно оказывает полный комплекс строительных и проектировочных услуг юридическим и физическим лицам. Компания имеет высоко профессиональный штат сотрудников, среди которых специалисты, имеющие большой опыт в сфере строительства.</p>
+				<div class="about-header"><span>О нас</span></div>
+				<div class="__details-container">
+					<div class="about-block about-company">
+						<div class="about-block-header">О компании</div>
+						<div class="section">
+							<p>Строительная компания <span class="cit">ТОО «NURLYTAU CONSTRUCTION»</span>  уже более 15 лет на рынке (с 2008 года) успешно оказывает полный комплекс строительных и проектировочных услуг юридическим и физическим лицам. Компания имеет высоко профессиональный штат сотрудников, среди которых специалисты, имеющие большой опыт в сфере строительства.</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="about-block about-principles">
-					<div class="about-block-header">Принципы компании</div>
-					<div class="section">
-						<p>Качество, надежность и доверие – основные критерии, на которых строятся принципы нашей строительной компании <span class="cit">ТОО «NURLYTAU CONSTRUCTION»</span>.</p>
+					<div class="about-block about-principles">
+						<div class="about-block-header">Принципы компании</div>
+						<div class="section">
+							<p>Качество, надежность и доверие – основные критерии, на которых строятся принципы нашей строительной компании <span class="cit">ТОО «NURLYTAU CONSTRUCTION»</span>.</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="about-block about-competencies">
-					<div class="about-block-header">Компетенции</div>
-					<div class="section">
-						<p>Мы имеем богатый опыт работы, достаточную материально-техническую базу и квалификационный персонал.</p>
+					<div class="about-block about-competencies">
+						<div class="about-block-header">Компетенции</div>
+						<div class="section">
+							<p>Мы имеем богатый опыт работы, достаточную материально-техническую базу и квалификационный персонал.</p>
+						</div>
 					</div>
-				</div>
 
-				<div class="about-block about-competencies">
-					<div class="about-block-header">Деятельность</div>
-					<div class="section">
-						<p>Основными видами деятельности являются <span class="cit">монтаж металлоконструкций</span>, <span class="cit">поставка сэндвич-панелей</span>.</p>
+					<div class="about-block about-competencies">
+						<div class="about-block-header">Деятельность</div>
+						<div class="section">
+							<p>Основными видами деятельности являются <span class="cit">монтаж металлоконструкций</span>, <span class="cit">поставка сэндвич-панелей</span>.</p>
+						</div>
 					</div>
 				</div>
 
@@ -190,7 +237,6 @@
 
 	<div class="projects" id="projects">
 		<div class="projects-header">Наши проекты</div>
-
 		<div class="projects__section">
 			<div class="projects__section-title">Строительство</div>
 
@@ -199,58 +245,50 @@
 			<ul class="projects__section-container">
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris5.png" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris5.png" alt=""></div>
 					<div class="projects__block-thumbnails">
 						<img src="img/ris4.png">
 					</div>
 					<div class="projects__block-name">Eurasia Group Kazakhstan</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ptice1.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ptice1.jpg" alt=""></div>
 					<div class="projects__block-thumbnails">
 						<img src="img/ptice2.jpg">
 						<img src="img/ptice3.jpg">
 					</div>
 					<div class="projects__block-name">Птицефарбика (6 цехов)</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris6.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris6.jpg" alt=""></div>
 					<div class="projects__block-name">Магазин CAR CITY</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 				
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris7.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris7.jpg" alt=""></div>
 					<div class="projects__block-name">СТО FORSAGE</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 				
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris10.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris10.jpg" alt=""></div>
 					<div class="projects__block-name">Магазин Musi-pusi</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 				
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris11.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris11.jpg" alt=""></div>
 					<div class="projects__block-name">Магазин АТМОСФЕРА</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/b3.png" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/b3.png" alt=""></div>
 					<div class="projects__block-name">Сервисный центр Auto PLUS</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 				
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/b2.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/b2.jpg" alt=""></div>
 					<div class="projects__block-name">Магазин ДОБРО ЦЕН</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 			</ul>
 		</div>
@@ -263,45 +301,38 @@
 			<ul class="projects__section-container">
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris9.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris9.jpg" alt=""></div>
 					<div class="projects__block-name">Ледовая арена</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/ris8.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/ris8.jpg" alt=""></div>
 					<div class="projects__block-name">CHERY KOKSHETAU</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/pan3.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/pan3.jpg" alt=""></div>
 					<div class="projects__block-name">ОГО-GO</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/pan2.png" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/pan2.png" alt=""></div>
 					<div class="projects__block-name">LIQUI MOLY</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/pan2.png" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/pan2.png" alt=""></div>
 					<div class="projects__block-name">FOOTBALL ОКЖЕТПЕС</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/pan4.jpg" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/pan4.jpg" alt=""></div>
 					<div class="projects__block-name">AVTO | SPA</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 
 				<li class="projects__block">
-					<div class="projects__block-img"><img src="img/pan1.png" alt=""></div>
+					<div class="projects__block-img"><span>Еще фото</span><img src="img/pan1.png" alt=""></div>
 					<div class="projects__block-name">Здание</div>
-					<button id="projects_button" class="projects__block-btn">Подробнее</button>
 				</li>
 			</ul>
 		</div>
@@ -324,52 +355,57 @@
 
 
 	<footer class="footer">
-		<div class="footer-wrapper"><!-- 
-			<div class="footer-section">
-				<a href="#" class="fs_logo"><img src="img/logo2.png"></a>
-			</div> -->
-			<div class="footer-section">
-				<div class="fsection__title">Навигация сайта</div>
-				<ul class="fsection__list">
-					<li class="fs_link"><a href="#">О нас</a></li>
-					<li class="fs_link"><a href="#">Наши проекты</a></li>
-				</ul>
-			</div>
-			<div class="footer-section">
-				<div class="fsection__title">Система</div>
-				<ul class="fsection__list">
-					<li class="fs_link"><a href="webcalc/index.html">Калькулятор для расчета зданий</a></li>
-				</ul>
-			</div>
-			<div class="footer-section">
-				<ul class="fsection__list">
-					<li class="fsection__title">Местоположение</li>
-					<li class="fs_text">г. Кокшетау, улица ффф 00</li>
-					<li class="fs_link"><a href="#">ya maps</a></li>
-				</ul>
-			</div>
-			<div class="footer-section">
-				<div class="fsection__title">Социальные сети</div>
-				<ul class="fsection__social">
-					<li class="fs_social-link"><a href="https://tiktok.com"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
-					<li class="fs_social-link"><a href="https://instagram.com"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
-					<li class="fs_social-link"><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-at-fill"></iconify-icon></a></li>
-					<li class="fs_social-link"><a href="#"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
-					<li class="fs_social-link"><a href="#"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
-				</ul>
+		<div class="footer-wrap">
+			<div class="footer-map" id="foo-map">
+		</div>
+			<div class="footer-content">
+				<div class="footer-section">
+					<div class="fsection__title">Навигация сайта</div>
+						<ul class="fsection__list">
+							<li class="fs_link"><a href="#">О нас</a></li>
+							<li class="fs_link"><a href="#">Наши проекты</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<div class="fsection__title">Система</div>
+						<ul class="fsection__list">
+							<li class="fs_link"><a href="webcalc/index.html">Калькулятор для расчета зданий</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<ul class="fsection__list">
+							<li class="fsection__title">Местоположение</li>
+							<li class="fs_text">г. Кокшетау, улица ффф 00</li>
+							<li class="fs_link"><a href="#">ya maps</a></li>
+						</ul>
+					</div>
+					<div class="footer-section">
+						<div class="fsection__title">Социальные сети</div>
+						<ul class="fsection__social">
+							<li class="fs_social-link"><a href="https://tiktok.com"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="https://instagram.com"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-at-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="footer-powered" style="grid-row: 2;grid-column: span;">
+		<div class="footer-powered">
 			<p>© 2023 ТОО NURLY TAU CONSTRUCTION. Все права защищены.</p>
+			<p><a href="https://juniors.kz">Разработчик сайта</a></p>
 		</div>
 	</footer>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<script src="https://api-maps.yandex.ru/v3/?apikey=b58e8811-1239-4751-9bcf-d792af96c461&lang=ru_RU"></script>
 	<script src="js/main.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/carousel.js"></script>
 	<script src="js/modal.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
