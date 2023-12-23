@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let imagesArray = [];
   let currentSlideIndex = 0;
   let projectBlock;
+  var isScrolling = false;
 
   function updateImagesArray() {
     imagesArray = [];
@@ -66,15 +67,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.projects__block').forEach(function (block) {
-    block.querySelector("#projects_button").addEventListener('click', function () {
-      imagesArray = [];
-      currentSlideIndex = 0;
-      projectBlock = block;
-      updateImagesArray();
-      updateModalTitle();
-      // console.log(imagesArray);
-      // console.log(document.querySelector('.modal-content .slider .slide img'));
-      document.querySelector('.modal').classList.add('active');
+    block.querySelector(".projects__block-img").addEventListener('click', function () {
+      if(!isScrolling){
+        imagesArray = [];
+        currentSlideIndex = 0;
+        projectBlock = block;
+        updateImagesArray();
+        updateModalTitle();
+        // console.log(imagesArray);
+        // console.log(document.querySelector('.modal-content .slider .slide img'));
+        document.querySelector('.modal').classList.add('active');
+      }
     });
   });
 
@@ -86,4 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.modal').classList.remove('active');
     }
   });
+
+  document.querySelector(".projects__section-container").addEventListener('scroll', function(event){
+        isScrolling = true;
+        setTimeout(function(){
+          isScrolling = false;
+        }, 100);
+  })
 });
