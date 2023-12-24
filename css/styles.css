@@ -610,6 +610,7 @@ body {
 	font-size: calc(16px + 2 * (100vw - 320px) / 880);
 	font-weight: 600;
 	color: #ffab23;
+	text-align: center;
 	text-shadow: rgba(0,0,0,.23) 0 2px 5px;
 }
 .calc-link {
