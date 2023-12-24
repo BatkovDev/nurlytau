@@ -882,7 +882,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	padding: 0 var(--padding-vert);
+	padding: 10px var(--padding-vert);
 	margin: 15px 0;
 	font-weight: 600;
 	font-family: 'Open Sans', 'Jost';
