@@ -36,27 +36,25 @@
 	</div> -->
 
 	<div class="responsive-nav rnav">
-		<div class="rnav-wrap">
-			<a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
+    <div class="rnav-wrap">
+      <a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
+      <iconify-icon class="burger-btn" icon="bi:list"></iconify-icon>
+    </div>
+    <div class="burger-menu">
+      <ul>
+			<li><a href="#about-us">О нас</a></li>
+			<li><a href="#calculator">Калькулятор</a></li>
+			<li><a href="#">Наши проекты</a></li>
+      </ul>
+      <ul>
+        <li><a href="tel:+77777777777"><iconify-icon icon="bi:telephone-fill"></iconify-icon> +7 (777) 777-7777</a></li>
+        <li><a href="mailto:example@example.com"><iconify-icon icon="bi:envelope-fill"></iconify-icon> example@example.com</a></li>
+        <li><a href="https://yandex.kz/maps/"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
+      </ul>
+    </div>
+  </div>
 
-			<button class="burger-btn">o</button>
-		</div>
-
-		<div class="burger-menu">
-			<ul>
-				<li><a href="#">О нас</a></li>
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Наши проекты</a></li>
-			</ul>
-			<ul>
-				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> +7 (777) 777-7777</a></li>
-				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> example@example.com</a></li>
-				<li><a href="#"><iconify-icon icon="bi:"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="header">
+	<div class="header" id="header">
 		<div class="header-wrap">
 			<ul class="circles">
 				<li><iconify-icon icon="mingcute:shovel-fill"></iconify-icon></li>
@@ -71,37 +69,37 @@
 				<li><iconify-icon icon="mingcute:hammer-fill"></iconify-icon></li>
 			</ul>
 			<div class="header__bar">
-				<a href="#" class="header-bar__logo"><img src="img/logo2.png"></a>
+				<a href="#header" class="header-bar__logo"><img src="img/logo2.png"></a>
 
 				<div class="header-bar__contacts">
-					<div class="header-bar__contact __contacts-phone">
+					<a href="tel:+77777777777" class="header-bar__contact __contacts-phone">
 						<div class="icon"><iconify-icon icon="bi:telephone-fill"></iconify-icon></div>
 						<div class="c-details">
 							<span class="__title">+7 (777) 777-7777</span>
 							<span class="__description">Позвонить</span>
 						</div>
-					</div>
+					</a>
 
-					<div class="header-bar__contact __contacts-mail">
+					<a href="mailto:example@example.com" class="header-bar__contact __contacts-mail">
 						<div class="icon"><iconify-icon icon="bi:envelope-fill"></iconify-icon></div>
 						<div class="c-details">
 							<span class="__title">example@example.com</span>
 							<span class="__description">Напишите нам</span>
 						</div>
-					</div>
+					</a>
 
-					<div class="header-bar__contact __contacts-geo">
+					<a href="https://yandex.kz/maps/" class="header-bar__contact __contacts-geo">
 						<div class="icon"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon></div>
 						<div class="c-details">
 							<span class="__title">г. Кокшетау, ул. Центральный 41б, 10 этаж</span>
 							<span class="__description">Центральный офис</span>
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="header-container">
-				<h1 class="__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, ad et ullam.</h1>
+				<h1 class="__title">Lorem ipsum dolor sit, amet consectetur.</h1>
 			</div>
 		</div>
 	</div>
@@ -111,7 +109,7 @@
 			<div class="nav">
 				<ul>
 					<li><a href="#about-us">О нас</a></li>
-					<li><a href="#contacts">Контакты</a></li>
+					<li><a href="#calculator">Калькулятор</a></li>
 					<li><a href="#projects">Наши проекты</a></li>
 				</ul>
 			</div>
@@ -139,7 +137,7 @@
 		</div>
 	</div>
 	<div class="questions">
-		<div class="calculator">
+		<div class="calculator" id="calculator">
 			<div class="calculator-wrap">
 				<div class="calc-description">Проектирование и расчет стоимости здания онлайн.</div>
 				<div class="calc-link"><a href="webcalc/index.html">Калькулятор <iconify-icon icon="icon-park-solid:click"></iconify-icon></a></div>
@@ -362,8 +360,9 @@
 				<div class="footer-section">
 					<div class="fsection__title">Навигация сайта</div>
 						<ul class="fsection__list">
-							<li class="fs_link"><a href="#">О нас</a></li>
-							<li class="fs_link"><a href="#">Наши проекты</a></li>
+							<li class="fs_link"><a href="#header">Главная</a></li>
+							<li class="fs_link"><a href="#about-us">О нас</a></li>
+							<li class="fs_link"><a href="#projects">Наши проекты</a></li>
 						</ul>
 					</div>
 					<div class="footer-section">
@@ -375,8 +374,7 @@
 					<div class="footer-section">
 						<ul class="fsection__list">
 							<li class="fsection__title">Местоположение</li>
-							<li class="fs_text">г. Кокшетау, улица ффф 00</li>
-							<li class="fs_link"><a href="#">ya maps</a></li>
+							<li class="fs_text">г. Кокшетау, ул. Центральный 41б, 10 этаж</li>
 						</ul>
 					</div>
 					<div class="footer-section">
@@ -384,9 +382,9 @@
 						<ul class="fsection__social">
 							<li class="fs_social-link"><a href="https://tiktok.com"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
 							<li class="fs_social-link"><a href="https://instagram.com"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
-							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-at-fill"></iconify-icon></a></li>
-							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
-							<li class="fs_social-link"><a href="#"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="mailto:example@example.com"><iconify-icon style="color: #183558" icon="bi:envelope-at-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="tel:+777777777777"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="https://yandex.kz/maps/"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
 						</ul>
 					</div>
 				</div>
