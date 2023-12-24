@@ -883,11 +883,11 @@ body {
 	display: none;
 }
 .projects__button-scroll.prev {
-	left: -18px;
+	left: 0;
 	z-index: 1;
 }
 .projects__button-scroll.next {
-	right: -18px;
+	right: 0;
 	z-index: 1;
 }
 
