@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
      map.addChild(new YMapDefaultSchemeLayer());
   }
+  const burgerBtn = document.querySelector('.burger-btn');
+  const burgerMenu = document.querySelector('.responsive-nav');
+
+  burgerBtn.addEventListener('click', function () {
+    burgerMenu.classList.toggle('show');
+    if(burgerBtn.setAttribute("icon", burgerMenu.classList.contains("show") ? "bi:x" : "bi:list"));
+  });
+
   /*const media = document.querySelectorAll('img');
   const preloader = document.querySelector('.preloader')
   const percent = document.querySelector('.preloader__load-percents span');
