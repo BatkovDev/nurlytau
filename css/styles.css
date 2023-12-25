@@ -180,6 +180,9 @@ body {
 	.nav-quality-container .nav {
 		display: none !important;
 	}
+	.img-container .overlay-top {
+		height: 2.5em;
+	}
 	.about-us__container {
 		display: flex !important;
 		flex-direction: column-reverse;
@@ -819,12 +822,12 @@ body {
 	justify-content: center;
 	flex-flow: row nowrap;
 	align-items: baseline;
-	background: #E36C14;
-	background: radial-gradient(circle, rgb(236.93, 129.44, 49.942) 0%, rgba(230,123,44,1) 100%);
+	background: #cfcfcf;
+	/*background: radial-gradient(circle, rgb(236.93, 129.44, 49.942) 0%, rgba(230,123,44,1) 100%);*/
 	padding: 20px 4px 30px 4px;
-	margin: 0 6px;
+	/*margin: 0 6px;*/
 	gap: 10px;
-	border-radius: 25px;
+	/*border-radius: 25px;*/
 }
 
 .qualities .quality {
@@ -832,12 +835,27 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 16px;
+	gap: 20px;
 	width: 250px;
 	/*max-height: 160px;*/
 	padding: 4px;
 	/*background-color: #ea7935;*/
 	color: #2A2A2A;
+	cursor: pointer;
+}
+
+.qualities .quality:hover .q-number {
+	box-shadow: rgb(34 76 195 / 90%) 0 0 30px;
+	background-color: #446299;
+}
+
+.qualities .quality:hover .q-name {
+	box-shadow: rgba(255, 171, 35, .9) 0 0 30px;
+	transform: translateY(-5px);
+	background-color: #E67B2C;
+}
+.qualities .quality:hover .q-name::after {
+	border-bottom-color: #E67B2C;
 }
 
 .qualities .quality .q-number {
@@ -845,21 +863,23 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-size: calc(32px + 8 * (100vw - 320px) / 880);
-	background: linear-gradient(45deg, #446299, #3d66b1);
+	background: #bbb;
 	border-radius: 50%;
 	width: 1.6em;
 	height: 1.6em;
+	transition: .14s;
 }
 .qualities .quality .q-name {
 	text-align: center;
 	font-size: calc(16px + 4 * (100vw - 320px) / 880);
 	padding: 4px 14px;
-	background: linear-gradient(0deg, #f79d0a, #ffab23);
+	background: #a9adb7;
 	font-family: 'Jost';
 	position: relative;
 	border-radius: 12px;
-	color: #502d13;
+	color: #282828;
 	box-shadow: rgba(0,0,0,.13) 0 2px 5px;
+	transition: .14s;
 }
 .qualities .quality .q-name::after {
 	content: '';
@@ -872,9 +892,10 @@ body {
 	margin: 5px auto;
 	border-top: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-bottom: 12px solid #ffab23;
+	border-bottom: 12px solid #a9adb7;
 	border-left: 10px solid transparent;
 	box-sizing: border-box;
+	transition: .14s;
 }
 
 
@@ -895,7 +916,7 @@ body {
 	display: flex;
 	align-self: center;
 	padding: 5px 8px;
-	margin: 15px 0 10px;
+	margin: 5px 0 10px;
 	border-radius: 8px;
 	font-weight: 600;
 	line-height: 1.5;
@@ -1144,7 +1165,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 5px;
+	gap: 10px;
 	margin-top: 20px;
 	padding: 0 10px;
 	font-size: calc(12px + 4 * (100vw - 320px) / 880);
@@ -1155,11 +1176,11 @@ body {
 }
 .footer-powered p a {
 	display: block;
-	color: #ffab23;
+	color: #E67B2C;
 	transition: color .2s;
 }
 .footer-powered p a:hover {
-	color: #1C4EAA;
+	color: #ffab23;
 }
 
 .fsection__title {
@@ -1167,7 +1188,7 @@ body {
 	text-transform: lowercase;
 	font-variant: small-caps;
 	font-weight: 600;
-	font-size: calc(17px + 7 * (100vw - 320px) / 880);
+	font-size: calc(22px + 2 * (100vw - 320px) / 880);
 	color: #8B8B8C;
 }
 
