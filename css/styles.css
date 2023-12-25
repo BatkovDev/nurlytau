@@ -1030,6 +1030,114 @@ body {
   outline-offset: 3px;
 }
 
+/* FEEDBACK */
+.feedback {
+	display: flex;
+	justify-content: center;
+	padding: 0 var(--padding-vert);
+	margin-bottom: 15px;
+}
+.feedback-wrap {
+	max-width: 750px;
+	background-color: #f1f1f1;
+	border-radius: 15px;
+	box-shadow: rgba(0,0,0,.13) 0 1px 6px;
+	width: 100%;
+}
+.feedback-item {
+	display: flex;
+	flex-direction: column;
+	flex: none;
+	padding: 12px 24px;
+}
+
+.feedback-item .__header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.feedback-item .__header .__title {
+	color: #1C4EAA;
+	font-size: calc(20px + 8 * (100vw - 320px) / 880);
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+.feedback-item .__header .__description {
+	font-size: calc(14px + 4 * (100vw - 320px) / 880);
+}
+.feedback-item .__social {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+.feedback-item .__social li a {
+	color: #181818;
+	padding: 6px;
+}
+.feedback-item .__social li a:hover {
+	color: #2A2A2A;
+}
+
+.feedback-item form {
+	margin-top: 15px;
+}
+.feedback-item form div:not(:last-child) {
+	margin-bottom: 10px;
+}
+.feedback__form-input input.__text-input {
+	border: none;
+	width: 100%;
+	padding: 10px;
+	background-color: #a7b1c3;
+	border-radius: 6px;
+	outline: none;
+}
+.feedback__form-input input.__text-input::placeholder, .feedback-item form div .__message::placeholder {
+	color: #2c2c2c;
+	font-size: calc(14px + 4 * (100vw - 320px) / 880);
+}
+
+.feedback-item form div textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	border-radius: 6px;
+	border: none;
+	color: #181818;
+	background-color: #a7b1c3;
+	box-sizing: border-box;
+	outline: none;
+	resize: none;
+}
+.feedback-item form div textarea:focus, .feedback__form-input input.__text-input:focus {
+	background-color: #8d97b1;
+}
+.feedback-item form div textarea::-webkit-scrollbar {
+	width: 4px;
+}
+.feedback-item form div textarea::-webkit-scrollbar-thumb {
+	background: #E67B2C;
+}
+.feedback-item form div textarea::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+.feedback-item form div .__submit {
+	background-color: #183558;
+	color: #e8e8e8;
+	font-size: 16px;
+	padding: 10px 14px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .2s;
+}
+.feedback-item form div .__submit:hover {
+	background-color: #12326e;
+}
+
+
+
 /*FOOTER*/
 .footer {
 	display: flex;
