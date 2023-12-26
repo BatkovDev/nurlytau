@@ -14,6 +14,19 @@
 	</script> -->
 </head>
 <body>
+	<div class="bottom-buttons">
+		<button class="botbtn__contacts-modal" type="button"><iconify-icon icon="bi:telephone-fill"></iconify-icon></button>
+	</div>
+	<div class="mobile__contacts">
+		<div class="mobile__contacts-modal">
+	      	<div class="title">Как вам удобнее с нами связаться?</div>
+		      <ul>
+		      	<li><a href="tel:7058886994"><iconify-icon icon="mdi:phone-outgoing"></iconify-icon>Позвонить +7 (705) 888-69-94</a></li>
+		      	<li><a href="#"><iconify-icon style="color: green;" icon="bi:whatsapp"></iconify-icon>WhatsApp</a></li>
+		      </ul>
+		      <div class="modal-close"><iconify-icon icon="bi:arrow-left-short"></iconify-icon>Отмена</div>
+		</div>
+	</div>
 	<div class="responsive-nav rnav">
     <div class="rnav-wrap">
       <a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
@@ -22,12 +35,11 @@
     <div class="burger-menu">
       <ul>
 			<li><a href="#about-us">О нас</a></li>
-			<li><a href="#calculator">Калькулятор</a></li>
 			<li><a href="#projects">Наши проекты</a></li>
+			<li><a href="#">Контакты</a></li>
       </ul>
       <ul>
-        <li><a href="tel:+77777777777"><iconify-icon icon="bi:telephone-fill"></iconify-icon> +7 (777) 777-7777</a></li>
-        <li><a href="mailto:example@example.com"><iconify-icon icon="bi:envelope-fill"></iconify-icon> example@example.com</a></li>
+        <li><a href="mailto:nurlytau01@mail.ru"><iconify-icon icon="bi:envelope-fill"></iconify-icon> nurlytau01@mail.ru</a></li>
         <li><a href="https://yandex.kz/maps/"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
       </ul>
     </div>
@@ -51,18 +63,18 @@
 				<a href="#header" class="header-bar__logo"><img src="img/logo2.png"></a>
 
 				<div class="header-bar__contacts">
-					<a href="tel:+77777777777" class="header-bar__contact __contacts-phone">
+					<a href="tel:+77058886994" class="header-bar__contact __contacts-phone">
 						<div class="icon"><iconify-icon icon="bi:telephone-fill"></iconify-icon></div>
 						<div class="c-details">
-							<span class="__title">+7 (777) 777-7777</span>
-							<span class="__description">Позвонить</span>
+							<span class="__title">+7 (705) 888-69-94</span>
+							<span class="__description">Отдел продаж</span>
 						</div>
 					</a>
 
-					<a href="mailto:example@example.com" class="header-bar__contact __contacts-mail">
+					<a href="mailto:nurlytau01@mail.ru" class="header-bar__contact __contacts-mail">
 						<div class="icon"><iconify-icon icon="bi:envelope-fill"></iconify-icon></div>
 						<div class="c-details">
-							<span class="__title">example@example.com</span>
+							<span class="__title">nurlytau01@mail.ru</span>
 							<span class="__description">Напишите нам</span>
 						</div>
 					</a>
@@ -78,7 +90,7 @@
 			</div>
 
 			<div class="header-container">
-				<h1 class="__title">Lorem ipsum dolor sit, amet consectetur.</h1>
+				<h1 class="__title">Ваш надежный партнер в создании металлических конструкций любой сложности.</h1>
 			</div>
 		</div>
 	</div>
@@ -88,8 +100,8 @@
 			<div class="nav">
 				<ul>
 					<li><a href="#about-us">О нас</a></li>
-					<li><a href="#calculator">Калькулятор</a></li>
 					<li><a href="#projects">Наши проекты</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 			</div>
 
@@ -333,9 +345,38 @@
 
 	<div class="feedback">
 		<div class="feedback-wrap">
+			<div class="feedback-item left">
+				<div class="__title">Контакты</div>
+				<ul class="__contacts">
+					<div class="circle"><iconify-icon class="icon" icon="bi:telephone-fill"></iconify-icon></div>
+					<li class="contact">
+						<a href="tel:+77058886994">
+							<span class="name">Отдел продаж</span>
+							<span class="number">+7 (705) 888-69-94</span>
+						</a>
+					</li>
+					<li class="contact">
+						<a href="tel:+77761223303">
+							<span class="name">Отдел снабжения</span>
+							<span class="number">+7 (776) 122-33-03</span>
+						</a>
+					</li>
+					<li class="contact">
+						<a href="tel:+77778698001">
+							<span class="name">Коммерческий директор</span>
+							<span class="number">+7 (777) 869-80-01</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="__social">
+					<li><a href="#"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
+					<li><a href="#"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
+					<li><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
+				</ul>
+			</div>
 			<div class="feedback-item">
 				<div class="__header">
-					<div class="__title">Отправить сообщение</div>
+					<div class="__title">Обратная связь</div>
 					<div class="__description">Укажите своё имя, контактный телефон и текст сообщения, и мы ответим в кратчайшие сроки.</div>
 				</div>
 				<form>
@@ -354,12 +395,6 @@
 						<input class="__submit" type="submit" value="Отправить" id="feedback__form-submit" name="fb-form-submit" tabindex="4">
 					</div>
 				</form>
-				<ul class="__social">
-					<li><a href="#"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
-					<li><a href="#"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
-					<li><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
-					<li><a href="tel:+777777777777"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -395,7 +430,7 @@
 						<ul class="fsection__social">
 							<li class="fs_social-link"><a href="https://tiktok.com"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
 							<li class="fs_social-link"><a href="https://instagram.com"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
-							<li class="fs_social-link"><a href="mailto:example@example.com"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
+							<li class="fs_social-link"><a href="mailto:nurlytau01@mail.ru"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
 							<li class="fs_social-link"><a href="tel:+777777777777"><iconify-icon style="color: #137a00" icon="bi:telephone-fill"></iconify-icon></a></li>
 							<li class="fs_social-link"><a href="https://yandex.kz/maps/"><iconify-icon style="color: #c51717" icon="bi:geo-alt-fill"></iconify-icon></a></li>
 						</ul>
