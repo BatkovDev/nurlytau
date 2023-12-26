@@ -126,6 +126,16 @@ body {
 		justify-content: center;
 		gap: 5px;
 	}
+	.feedback-wrap .feedback-item.left {
+		display: none;
+	}
+	.feedback-wrap {
+		display: flex !important;
+		width: 100%;
+	}
+	.bottom-buttons {
+		display: block !important;
+	}
 	.footer {
 		padding: 25px 0 !important;
 	}
@@ -388,8 +398,8 @@ body {
 	z-index: 2;
 }
 .header-container .__title {
-	max-width: calc(400px + 100 * (100vw - 320px) / 880);
-	font-size: calc(20px + 26 * (100vw - 320px) / 880);
+	max-width: 70vw;
+	font-size: calc(20px + 22 * (100vw - 320px) / 880);
 	font-weight: 600;
 	text-align: center;
 	color: #E8E8E8;
@@ -988,40 +998,40 @@ body {
 	width: 100%;
 	max-height: 100vh;
 }
-.modal-header {
+.modal-container .modal-header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   background-color: #fff;
 }
-.modal-title {
+.modal-container .modal-header .modal-title {
   font-size: 18px;
   font-weight: bold;
 }
-.modal-close {
+.modal-container .modal-header .modal-close {
   cursor: pointer;
   font-size: 20px;
   background: none;
   border: none;
 }
-.modal-content {
+.modal-container .modal-content {
   padding: 20px;
   background-color: #E8E8E8;
 }
-.slider {}
-.slider .slide img {
+.modal-container .modal-content .slider {}
+.modal-container .modal-content .slider .slide img {
 	max-width: 560px;
 	width: 100%;
 	height: auto;
 	max-height: 450px;
 }
-.thumbnails {
+.modal-container .modal-content .thumbnails {
   display: flex;
   justify-content: center;
   margin-top: 10px;
   gap: 5px;
 }
-.thumbnails img {
+.modal-container .modal-content .thumbnails img {
   width: 50px;
   height: 50px;
   margin: 0 5px;
@@ -1038,17 +1048,72 @@ body {
 	margin-bottom: 15px;
 }
 .feedback-wrap {
-	max-width: 750px;
-	background-color: #f1f1f1;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background-color: #cfd2e1;
 	border-radius: 15px;
-	box-shadow: rgba(0,0,0,.13) 0 1px 6px;
+	box-shadow: rgb(0 0 0 / 13%) 0 2px 4px;
 	width: 100%;
+	overflow: hidden;
 }
 .feedback-item {
+	padding: 12px 24px;
+}
+.feedback-item.left {
 	display: flex;
 	flex-direction: column;
-	flex: none;
-	padding: 12px 24px;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid gray;
+	margin: 20px 0;
+}
+.feedback-item.left .__title {
+	display: flex;
+	justify-content: center;
+	font-size: 36px;
+	font-weight: 600;
+	color: #170B02;
+	margin-bottom: 15px;
+}
+.feedback-item.left .__contacts {
+	display: flex;
+	flex-direction: column;
+	background-color: #EFB658;
+	gap: 10px;
+	padding: 8px 10px 8px 24px;
+	border-radius: 12px;
+	position: relative;
+}
+.feedback-item.left .__contacts .circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 18px;
+	padding: 8px;
+	border-radius: 50%;
+	background-color: #d38d19;
+	color: #d9d1d1;
+	left: -17px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.feedback-item.left .__contacts .contact {
+}
+.feedback-item.left .__contacts .contact a {
+	display: flex;
+	flex-direction: column;
+}
+.feedback-item.left .__contacts .contact a .name {
+	font-size: 18px;
+	width: 100%;
+	color: #1e1e1e;
+	font-weight: 600;
+}
+.feedback-item.left .__contacts .contact a .number {
+	font-size: 14px;
+	color: #5c5c5c;
+	font-weight: 500;
 }
 
 .feedback-item .__header {
@@ -1218,4 +1283,94 @@ body {
 .fs_text {
 	font-size: calc(16px + 2 * (100vw - 320px) / 880);
 	color: #f1f1f1;
+}
+
+.bottom-buttons {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 9;
+}
+.bottom-buttons .botbtn__contacts-modal {
+	display: flex;
+	margin: 15px;
+	height: 1.9em;
+	width: 1.9em;
+	font-size: 1.5em;
+	background-color: #27c927;
+	color: #0b460b;
+	box-shadow: rgb(0 0 0 / 23%) 0 1px 4px;
+	border: unset;
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile__contacts {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.6);
+	z-index: 10;
+}
+.mobile__contacts.open {
+	display: block;
+}
+
+.mobile__contacts .mobile__contacts-modal {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #E8E8E8;
+	max-width: 500px;
+	width: 100%;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 3s ease-in-out;
+}
+.mobile__contacts.open .mobile__contacts-modal {
+	max-height: 600px;
+}
+
+.mobile__contacts-modal .title {
+	width: 100%;
+	margin: 10px;
+	margin-bottom: 15px;
+	color: #484848;
+}
+.mobile__contacts-modal  iconify-icon {
+	margin-right: 15px;
+	font-size: 20px;
+}
+.mobile__contacts-modal ul {
+	margin: 4px 8px;
+	margin-bottom: 10px;
+}
+.mobile__contacts-modal ul li:not(:last-child) {
+	margin-bottom: 8px;
+}
+.mobile__contacts-modal ul li a {
+	display: flex;
+	align-items: center;
+	padding: 6px 2px;
+	width: 100%;
+	color: #000;
+}
+
+.mobile__contacts-modal .modal-close {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	color: #000;
+	border-top: 1px solid gray;
+	cursor: pointer;
+}
+.mobile__contacts-modal .modal-close iconify-icon {
+	font-size: 24px;
 }
