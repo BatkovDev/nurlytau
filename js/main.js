@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-  initMap();
+  /*initMap();
 
   async function initMap() {
      await ymaps3.ready;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
      );
 
      map.addChild(new YMapDefaultSchemeLayer());
-  }
+  }*/
   const burgerBtn = document.querySelector(".burger-btn");
   const burgerMenu = document.querySelector(".responsive-nav");
 
