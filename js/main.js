@@ -1,21 +1,4 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-  /*initMap();
-
-  async function initMap() {
-     await ymaps3.ready;
-     const {YMap, YMapDefaultSchemeLayer} = ymaps3;
-     const map = new YMap(
-         document.getElementById("foo-map"),
-         {
-             location: {
-                 center: [53.308779, 69.393912],
-                 zoom: 10
-             }
-         }
-     );
-
-     map.addChild(new YMapDefaultSchemeLayer());
-  }*/
   const burgerBtn = document.querySelector(".burger-btn");
   const burgerMenu = document.querySelector(".responsive-nav");
 
@@ -38,22 +21,27 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
   });
 
-  /*const media = document.querySelectorAll("img");
-  const preloader = document.querySelector(".preloader")
-  const percent = document.querySelector(".preloader__load-percents span");
-  let i = 0;
-  media.forEach((file, index) => {
-    file.onload = () => {
-      i++;
+  var tabs = document.querySelectorAll('.products__sidetab button');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var tabId = this.getAttribute('data-tab');
+      changeProduct(tabId);
+    });
+  });
+  function changeProduct(productId) {
+    var productContents = document.querySelectorAll('.product-content');
+    productContents.forEach(function(content) {
+      content.classList.remove('active');
+    });
 
-      calcPercent = Math.ceil((i*100) / media.length);
-      if(calcPercent > 100) calcPercent = 100;
-      percent.innerHTML = calcPercent;
+    tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+    });
 
-      if(i === media.length){
-        percent.innerHTML = 100;
-        preloader.classList.add("hidden");
-      }
-    }
-  })*/
+    var selectedProduct = document.getElementById(productId);
+    selectedProduct.classList.add('active');
+
+    var activeTab = document.querySelector('.products__sidetab button[data-tab="' + productId + '"]');
+    activeTab.classList.add('active');
+  }
 });
