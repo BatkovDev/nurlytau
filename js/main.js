@@ -24,17 +24,36 @@ document.addEventListener("DOMContentLoaded", ()=>{
     if(burgerBtn.setAttribute("icon", busrgerMenu.classList.contains("show") ? "bi:x" : "bi:list"));
   });
 
-  document.querySelector(".botbtn__contacts-modal").addEventListener("click", function () {
-    document.querySelector(".mobile__contacts").classList.toggle("open");
+  document.querySelector(".feedback-form-btn").addEventListener("click", function () {
+    document.querySelector(".feedback").classList.toggle("open");
   });
 
-  document.querySelector(".mobile__contacts-modal .modal-close").addEventListener("click", function () {
+  /*document.querySelector(".feedback-form-btn .modal-close").addEventListener("click", function () {
     document.querySelector(".mobile__contacts").classList.remove("open");
-  });
+  });*/
 
-  document.querySelector(".mobile__contacts").addEventListener("click", function (event) {
-    if (!event.target.closest(".mobile__contacts-modal")) {
-      document.querySelector(".mobile__contacts").classList.remove("open");
+  document.querySelector(".feedback").addEventListener("click", function (event) {
+    if (!event.target.closest(".feedback-modal")) {
+      document.querySelector(".feedback").classList.remove("open");
     }
   });
+
+  /*const media = document.querySelectorAll("img");
+  const preloader = document.querySelector(".preloader")
+  const percent = document.querySelector(".preloader__load-percents span");
+  let i = 0;
+  media.forEach((file, index) => {
+    file.onload = () => {
+      i++;
+
+      calcPercent = Math.ceil((i*100) / media.length);
+      if(calcPercent > 100) calcPercent = 100;
+      percent.innerHTML = calcPercent;
+
+      if(i === media.length){
+        percent.innerHTML = 100;
+        preloader.classList.add("hidden");
+      }
+    }
+  })*/
 });
