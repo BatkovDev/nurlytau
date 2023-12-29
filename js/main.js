@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     document.querySelector(".feedback").classList.toggle("open");
   });
 
-  /*document.querySelector(".feedback-form-btn .modal-close").addEventListener("click", function () {
-    document.querySelector(".mobile__contacts").classList.remove("open");
-  });*/
+  document.querySelector(".feedback-close").addEventListener("click", function () {
+    document.querySelector(".feedback").classList.remove("open");
+  });
 
   document.querySelector(".feedback").addEventListener("click", function (event) {
     if (!event.target.closest(".feedback-modal")) {
