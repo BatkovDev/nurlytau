@@ -14,36 +14,83 @@
 	</script> -->
 </head>
 <body>
+	<button class="feedback-form-btn">ОСТАВЬТЕ ЗАЯВКУ</button>
 	<div class="bottom-buttons">
-		<button class="botbtn__contacts-modal" type="button"><iconify-icon icon="bi:telephone-fill"></iconify-icon></button>
+   	<button id="bbtns-whatsapp"><iconify-icon style="color: green;" icon="bi:whatsapp"></iconify-icon></button>
+		</button>
 	</div>
-	<div class="mobile__contacts">
-		<div class="mobile__contacts-modal">
-	      	<div class="title">Как вам удобнее с нами связаться?</div>
-		      <ul>
-		      	<li><a href="tel:7058886994"><iconify-icon icon="mdi:phone-outgoing"></iconify-icon>Позвонить +7 (705) 888-69-94</a></li>
-		      	<li><a href="#"><iconify-icon style="color: green;" icon="bi:whatsapp"></iconify-icon>WhatsApp</a></li>
-		      </ul>
-		      <div class="modal-close"><iconify-icon icon="bi:arrow-left-short"></iconify-icon>Отмена</div>
+	<div class="feedback">
+		<div class="feedback-modal">
+			<div class="feedback-wrap">
+				<div class="feedback-item left">
+					<ul class="__contacts">
+						<li class="contact">
+							<a href="tel:+77058886994">
+								<span class="name">Отдел продаж</span>
+								<span class="number">+7 (705) 888-69-94</span>
+							</a>
+						</li>
+						<li class="contact">
+							<a href="tel:+77761223303">
+								<span class="name">Отдел снабжения</span>
+								<span class="number">+7 (776) 122-33-03</span>
+							</a>
+						</li>
+						<li class="contact">
+							<a href="tel:+77778698001">
+								<span class="name">Коммерческий директор</span>
+								<span class="number">+7 (777) 869-80-01</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="__social">
+						<li><a href="#"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
+						<li><a href="#"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
+						<li><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
+					</ul>
+				</div>
+				<div class="feedback-item">
+					<div class="__header">
+						<div class="__title">Обратная связь</div>
+						<div class="__description">Укажите своё имя, контактный телефон и текст сообщения, и мы ответим в кратчайшие сроки.</div>
+					</div>
+					<form>
+						<div class="feedback__form-input">
+							<input class="__text-input" type="text" id="name" placeholder="Введите настоящее имя" tabindex="1">
+						</div>
+						<div class="feedback__form-input">
+							<input class="__text-input" type="text" id="phone_number" placeholder="Введите номер телефона" tabindex="2">
+						</div>
+
+						<div>
+							<textarea class="__message" id="feedback__message" placeholder="Введите сообщение" tabindex="3"></textarea>
+						</div>
+
+						<div>
+							<input class="__submit" type="submit" value="Отправить" id="feedback__form-submit" name="fb-form-submit" tabindex="4">
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="responsive-nav rnav">
-    <div class="rnav-wrap">
-      <a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
-      <iconify-icon class="burger-btn" icon="bi:list"></iconify-icon>
-    </div>
-    <div class="burger-menu">
-      <ul>
-			<li><a href="#about-us">О нас</a></li>
-			<li><a href="#projects">Наши проекты</a></li>
-			<li><a href="#">Контакты</a></li>
-      </ul>
-      <ul>
-        <li><a href="mailto:nurlytau01@mail.ru"><iconify-icon icon="bi:envelope-fill"></iconify-icon> nurlytau01@mail.ru</a></li>
-        <li><a href="https://2gis.kz/kokshetau/geo/70030076165638481"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
-      </ul>
-    </div>
-  </div>
+		<div class="rnav-wrap">
+			<a href="#" class="rnav__logo"><img src="img/logo2.png"></a>
+			<iconify-icon class="burger-btn" icon="bi:list"></iconify-icon>
+			</div>
+		<div class="burger-menu">
+			<ul>
+				<li><a href="#about-us">О нас</a></li>
+				<li><a href="#projects">Наши проекты</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<ul>
+				<li><a href="mailto:nurlytau01@mail.ru"><iconify-icon icon="bi:envelope-fill"></iconify-icon> nurlytau01@mail.ru</a></li>
+				<li><a href="https://2gis.kz/kokshetau/geo/70030076165638481"><iconify-icon icon="bi:geo-alt-fill"></iconify-icon> г. Кокшетау, ул. Центральный 41б, 10 этаж</a></li>
+			</ul>
+		</div>
+	</div>
 
 	<div class="header" id="header">
 		<div class="header-wrap">
@@ -61,6 +108,7 @@
 			</ul>
 			<div class="header__bar">
 				<a href="#header" class="header-bar__logo"><img src="img/logo2.png"></a>
+				<iconify-icon class="burger-btn" icon="bi:list"></iconify-icon>
 
 				<div class="header-bar__contacts">
 					<a href="tel:+77058886994" class="header-bar__contact __contacts-phone">
@@ -174,27 +222,6 @@
 						<div class="about-block-header">О компании</div>
 						<div class="section">
 							<p><span class="cit">Nurlytau Construction</span> – ведущая компания в области строительства быстровозводимых зданий. С более чем 15-летним опытом, мы специализируемся в создании высококачественных и инновационных проектов любой сложности. Вдохновляйтесь с нами, создавая прочные и эффективные строения для будущего. <a href="#">Подробнее</a></p>
-						</div>
-					</div>
-
-					<div class="about-block about-principles wow animate__animated animate__fadeInUp" data-wow-duration="1s">
-						<div class="about-block-header">Принципы компании</div>
-						<div class="section">
-							<p>Мы стремимся к высшему стандарту качества в каждом аспекте нашей деятельности, начиная от проектирования и заканчивая реализацией проектов. <a href="#">Подробнее</a></p>
-						</div>
-					</div>
-
-					<div class="about-block about-competencies wow animate__animated animate__fadeInUp" data-wow-duration="1s">
-						<div class="about-block-header">Компетенции</div>
-						<div class="section">
-							<p>Наша команда профессиональных архитекторов и инженеров создает инновационные и функциональные проекты, учитывая требования клиента и стандарты безопасности. <a href="#">Подробнее</a></p>
-						</div>
-					</div>
-
-					<div class="about-block about-competencies wow animate__animated animate__fadeInUp" data-wow-duration="1s">
-						<div class="about-block-header">Деятельность</div>
-						<div class="section">
-							<p>Основными видами деятельности являются <span class="cit">монтаж металлоконструкций</span>, <span class="cit">поставка сэндвич-панелей</span>. <a href="#">Подробнее</a></p>
 						</div>
 					</div>
 				</div>
@@ -342,62 +369,6 @@
 	  </div>
 	</div>
 
-
-	<div class="feedback">
-		<div class="feedback-wrap">
-			<div class="feedback-item left">
-				<div class="__title">Контакты</div>
-				<ul class="__contacts">
-					<div class="circle"><iconify-icon class="icon" icon="bi:telephone-fill"></iconify-icon></div>
-					<li class="contact">
-						<a href="tel:+77058886994">
-							<span class="name">Отдел продаж</span>
-							<span class="number">+7 (705) 888-69-94</span>
-						</a>
-					</li>
-					<li class="contact">
-						<a href="tel:+77761223303">
-							<span class="name">Отдел снабжения</span>
-							<span class="number">+7 (776) 122-33-03</span>
-						</a>
-					</li>
-					<li class="contact">
-						<a href="tel:+77778698001">
-							<span class="name">Коммерческий директор</span>
-							<span class="number">+7 (777) 869-80-01</span>
-						</a>
-					</li>
-				</ul>
-				<ul class="__social">
-					<li><a href="#"><iconify-icon style="color: #0e0e0e" icon="bi:tiktok"></iconify-icon></a></li>
-					<li><a href="#"><iconify-icon style="color: #b3198a" icon="bi:instagram"></iconify-icon></a></li>
-					<li><a href="#"><iconify-icon style="color: #183558" icon="bi:envelope-fill"></iconify-icon></a></li>
-				</ul>
-			</div>
-			<div class="feedback-item">
-				<div class="__header">
-					<div class="__title">Обратная связь</div>
-					<div class="__description">Укажите своё имя, контактный телефон и текст сообщения, и мы ответим в кратчайшие сроки.</div>
-				</div>
-				<form>
-					<div class="feedback__form-input">
-						<input class="__text-input" type="text" id="name" placeholder="Введите настоящее имя" tabindex="1">
-					</div>
-					<div class="feedback__form-input">
-						<input class="__text-input" type="text" id="phone_number" placeholder="Введите номер телефона" tabindex="2">
-					</div>
-
-					<div>
-						<textarea class="__message" id="feedback__message" placeholder="Введите сообщение" tabindex="3"></textarea>
-					</div>
-
-					<div>
-						<input class="__submit" type="submit" value="Отправить" id="feedback__form-submit" name="fb-form-submit" tabindex="4">
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 
 
 	<footer class="footer">
