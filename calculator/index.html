@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+<body>
+    
+    
+    
+    <div class="head">
+        <div class="text1">
+            РАССЧИТАТЬ СТОИМОСТЬ
+        </div>
+        
+        
+    </div>
+    
+
+    
+
+
+    <div class="secondcontent">
+        <div class="center">
+            Калькулятор 3D модель
+        </div>
+        <div class="content">
+            
+            <div class="indent">
+
+                <div id="cont01">
+                    <div class="text2">
+                        1) Кровля
+                        <span class="icon icon01" onclick="Hiddecontent(0)"></span>   
+                    </div>
+                    <div class="crovla cont001">
+                        <img class="krovla1" src="img\typeoff1.png" width="150" onclick="krovla1(1)">
+                        <img class="krovla2" src="img\type2.png" width="150" onclick="krovla1(2)">
+                    </div>
+
+
+                    <hr>
+                    <div class="text2">
+                        2) Пролеты
+                        <span class="icon icon02" onclick="Hiddecontent(1)"></span>
+                    </div>
+                    <div class="prolet cont002">
+                        <h4>Количество</h4>
+                        <span class="wrapper">
+                            <button class="js-minus-btn back" type="button">-</button>
+                            <input id="number-diet" class="js-number input inpt01" type="text" name="number" value="1" min="1">
+                            <button class="js-plus-btn back" type="button">+</button>
+                        </span>
+                        <h4>шт</h4>
+                        
+                    
+                        
+                        
+                         
+                    </div>
+
+
+                    <hr>
+                    <div class="text2" >
+                        3) Крановое оборудование
+                        <span class="icon icon03" onclick="Hiddecontent(2)"></span>
+                    </div>
+                
+                    <div class="align2 cont003">
+                        <button type="submit" class="back2"> 
+                            <h4 onclick="add(1)">+ Такуюже</h4>
+                            <input type="text" min="1" max="300" class="input input01" value="1">
+                            <h4 onclick="add(1)">шт</h4>
+                        </button>
+                        <button type="submit" class="back2" onclick="addOther()">
+                            <h4>+ Другую</h4>
+                        </button>
+                        
+                        
+                        <div class="maincontent_openings">
+                            
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+
+                <div id="cont02">
+                    <div class="text2">
+                        1) Размер здания
+                        <span class="icon icon04" onclick="Hiddecontent(3)"></span>   
+                    </div>
+                    <div class="prolet cont004">
+                        
+                        <div>
+                            <h4>Длина здания</h4>
+                            
+                            <span class="wrapper">
+                                            <button class="js-minus-btn back" type="button">-</button>
+                                            <input id="number-diet" class="js-number input set02" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn back" type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Ширина здания</h4>
+                            <span class="wrapper">
+                                            <button class="js-minus-btn back" type="button">-</button>
+                                            <input id="number-diet" class="js-number input set03" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn back" type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Высота до низа несущих конструкций</h4>
+                            <span class="wrapper">
+                                            <button class="js-minus-btn back" type="button">-</button>
+                                            <input id="number-diet" class="js-number input set04" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn back" type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                    </div>
+
+
+                    <hr>
+                    <div class="text2">
+                        2) Покрытие здания
+                        <span class="icon icon05" onclick="Hiddecontent(4)"></span>
+                    </div>
+
+                    <div class="prolet cont005">
+                        <div>
+                            <h4>Кровля здания</h4>
+                            <select class="set05">
+                                <option>Базальтовая</option>
+                                <option>ПИР</option>
+                            </select>
+                        </div>
+                        <div class="top">
+                            <h4>Толщина по утеплителю</h4>
+                            <select class="set06">
+                                <option>50</option>
+                                <option>80</option>
+                                <option>100</option>
+                                <option>120</option>
+                                <option>150</option>
+                                <option>200</option>
+                                <option>250</option>
+                                <option>300</option>
+                            </select>
+                            <h4>мм</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Стены здания</h4>
+                            <select class="set07">
+                                <option>Базальтовый</option>
+                                <option>ПИР</option>
+                            </select>
+                        </div>
+                        <div class="top">
+                            <h4>Толщина по утеплителю</h4>
+                            <select class="set08">
+                                <option>50</option>
+                                <option>80</option>
+                                <option>100</option>
+                                <option>120</option>
+                                <option>150</option>
+                                <option>200</option>
+                                <option>250</option>
+                                <option>300</option>
+                            </select>
+                            <h4>мм</h4>
+                        </div>
+                    </div>
+                    
+
+
+                    <hr>
+                    <div class="text2">
+                        3) Проемы
+                        <span class="icon icon06" onclick="Hiddecontent(5)"></span>
+                    </div>
+                    <div class="prolet cont006">
+                       
+                        <div>
+                            <h4>Ворота</h4>
+                            <span class="icon2 icon001" onclick="proem(1)"></span>
+                            <div class="align2 cont0001">
+                                <button type="submit" class="back2"> 
+                                    <h4 onclick="add1(1)">+ Такуюже</h4>
+                                    <input type="text" min="1" max="300" class="input input001" value="1">
+                                    <h4 onclick="add1(1)">шт</h4>
+                                </button>
+                                <button type="submit" class="back2" onclick="addOther1(1)">
+                                    <h4>+ Другую</h4>
+                                </button>
+                                
+                                
+                                <div class="maincontent_openings01 mm">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <h4>Двери</h4>
+                            <span class="icon2 icon002" onclick="proem(2)"></span>
+                            <div class="align2 cont0002">
+                                <button type="submit" class="back2"> 
+                                    <h4 onclick="add1(2)">+ Такуюже</h4>
+                                    <input type="text" min="1" max="300" class="input input002" value="1">
+                                    <h4 onclick="add1(2)">шт</h4>
+                                </button>
+                                <button type="submit" class="back2" onclick="addOther1(2)">
+                                    <h4>+ Другую</h4>
+                                </button>
+                                
+                                
+                                <div class="maincontent_openings02 mm">
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="top">
+                            <h4>Окна</h4>
+                            <span class="icon2 icon003" onclick="proem(3)"></span>
+                            <div class="align2 cont0003">
+                                <button type="submit" class="back2"> 
+                                    <h4 onclick="add1(3)">+ Такуюже</h4>
+                                    <input type="text" min="1" max="300" class="input input003" value="1">
+                                    <h4 onclick="add1(3)">шт</h4>
+                                </button>
+                                <button type="submit" class="back2" onclick="addOther1(3)">
+                                    <h4>+ Другую</h4>
+                                </button>
+                                
+                                
+                                <div class="maincontent_openings03 mm">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    
+                    
+                </div>
+
+                
+                <div id="cont03">
+                    <div class="text2">
+                        1) ФИО
+                        <input type="text"  class="input2 set09">
+                    </div>
+                    <hr>
+                    <div class="text2">
+                        2) E-mail
+                        <input type="text"  class="input2 set10">
+                    </div>
+                    <hr>
+                    <div class="text2">
+                        3) Телефон
+                        <input type="text"  class="input2 set11">
+                    </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="vid" >
+                    <img src="img\left.png" width="55" id="left" onclick="myFunction(false) ">
+                    <text id="id">
+                        ВНЕШНИИ ВИД
+                    </text>
+                    <button id="result" onclick="result()">ОТПРАВИТЬ</button>
+                    <img src="img\right.png" width="55" id="right"  onclick="myFunction(true)">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div>
+        <h9 class="h9"></h9>
+    </div>
+
+        
+        
+        
+    
+    
+        
+
+    <script src="js/index.js"></script>
+    
+    
+</body>
+
+</html>
