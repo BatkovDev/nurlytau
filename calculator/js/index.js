@@ -76,7 +76,7 @@ function result(){
     if(a3){
         h9.append(" //// Крановые оборудование: ");
         for (let i = 0; i < set.length; i++) {
-            h9.append(setcol[i]+" шт "+ " по "+set+" т");
+            h9.append(setcol[i]+" шт "+ " по "+set[i]+" т");
         }
     }else{
         h9.append(" //// Крановые оборудование: не указано");
