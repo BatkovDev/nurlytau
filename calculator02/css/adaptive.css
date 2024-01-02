@@ -1,0 +1,39 @@
+@media screen and (max-width: 1200px) {
+    
+}
+@media screen and (max-width: 998px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .secondcontent{
+        padding: 15px 10px;
+    }
+    .indent{
+        padding-top: 10px;
+    }
+    .maintext-content{
+        font-size: 20px;
+    }
+    .icon{
+        height: 30px;
+        width: 30px;
+    }
+    .foot-secondcontainer {
+        font-size: 18px;
+    }
+    #right{
+        margin-left: 2%;
+      }
+      #left{
+        margin-right: 2%;
+      }
+    .krovla1{
+        width: 90px;
+    }
+    .krovla2{
+        width: 90px;
+    }
+}
+@media screen and (max-width: 576px) {
+    
+}

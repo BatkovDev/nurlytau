@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="img/logo.png">
+            <div class="header-text">
+                <h1>РАССЧИТАТЬ СТОИМОСТЬ</h1>
+                <p>КАЛЬКУЛЯТОР | 3Д МОДЕЛЬ</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <div class="card-container">
+            <div class="indent">
+
+                <div id="content1">
+                    <div class="maintext-content">
+                        1) Кровля
+                        <img class="icon icon1" src="img/radioON.png" onclick="Hiddecontent(1)">
+                    </div>
+                    <div class="cont001">
+                        <img class="krovla1" src="img\typeoff1.png" width="150" onclick="krovla1(1)">
+                        <img class="krovla2" src="img\type2.png" width="150" onclick="krovla1(2)">
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="maintext-content">
+                        2) Пролеты
+                        <img class="icon icon2" src="img/radioOFF.png" onclick="Hiddecontent(2)">
+                    </div>
+                    <div class="cont002">
+                        <h4>Количество</h4>
+                        <span class="wrapper">
+                            <button class="js-minus-btn " type="button">-</button>
+                            <input id="number-diet" class="js-number inpt01" type="text" name="number" value="1" min="1">
+                            <button class="js-plus-btn " type="button">+</button>
+                        </span>
+                        <h4>шт</h4>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="maintext-content" >
+                        3) Крановое оборудование
+                        <img class="icon icon3" src="img/radioOFF.png" onclick="Hiddecontent(3)">
+                    </div>
+                    <div class="cont003">
+                        
+                        <div class="headtable">
+                            <div class="tableleft">
+                                <span class="wrapper">
+                                    <button class="js-minus-btn" type="button">-</button>
+                                    <input class="js-number inputTable" type="text" name="number" value="1" min="1">
+                                    <button class="js-plus-btn" type="button">+</button>
+                                </span>
+                                <h4>шт</h4>
+                            </div>
+                            <button type="submit" class="tableright" onclick="add()"><h4>+</h4></button>
+                        </div>
+                        <div class="maincontent_openings"></div>
+                    </div>
+                </div>
+
+
+                <div id="content2">
+                    <div class="maintext-content">
+                        1) Размер здания
+                    </div>
+                    <div class="cont004">
+                        <div>
+                            <h4>Длина здания</h4>
+                            <span class="wrapper">
+                                            <button class="js-minus-btn " type="button">-</button>
+                                            <input id="number-diet" class="js-number set02" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn " type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Ширина здания</h4>
+                            <span class="wrapper">
+                                            <button class="js-minus-btn " type="button">-</button>
+                                            <input id="number-diet" class="js-number set03" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn " type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Высота до низа несущих конструкций</h4>
+                            <span class="wrapper">
+                                            <button class="js-minus-btn " type="button">-</button>
+                                            <input id="number-diet" class="js-number set04" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn " type="button">+</button>
+                                        </span>
+                            <h4>м</h4>
+                        </div>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="maintext-content">
+                        2) Покрытие здания
+                    </div>
+                    <div class="cont005">
+                        <div>
+                            <h4>Кровля здания</h4>
+                            <select class="set05">
+                                <option>Базальтовая</option>
+                                <option>ПИР</option>
+                            </select>
+                        </div>
+                        <div class="top">
+                            <h4>Толщина по утеплителю</h4>
+                            <select class="set06">
+                                <option>50</option>
+                                <option>80</option>
+                                <option>100</option>
+                                <option>120</option>
+                                <option>150</option>
+                                <option>200</option>
+                                <option>250</option>
+                                <option>300</option>
+                            </select>
+                            <h4>мм</h4>
+                        </div>
+                        <div class="top">
+                            <h4>Стены здания</h4>
+                            <select class="set07">
+                                <option>Базальтовый</option>
+                                <option>ПИР</option>
+                            </select>
+                        </div>
+                        <div class="top">
+                            <h4>Толщина по утеплителю</h4>
+                            <select class="set08">
+                                <option>50</option>
+                                <option>80</option>
+                                <option>100</option>
+                                <option>120</option>
+                                <option>150</option>
+                                <option>200</option>
+                                <option>250</option>
+                                <option>300</option>
+                            </select>
+                            <h4>мм</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="line"></div>
+
+                    <div class="maintext-content">
+                        3) Проемы
+                        <img class="icon icon6" src="img/radioOFF.png" onclick="Hiddecontent(6)">
+                    </div>
+                    <div class="cont006">
+                        <div>
+                            <div class="opening">
+                                <h4>Ворота</h4>
+                                <img class="iconMini icon01" src="img/radioOFF.png" onclick="proem(1)">
+                            </div>
+                            <div class="cont0001">
+                        
+                                <div class="headtable">
+                                    <div class="tableleft">
+                                        <span class="wrapper">
+                                            <button class="js-minus-btn" type="button">-</button>
+                                            <input class="js-number input001" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn" type="button">+</button>
+                                        </span>
+                                        <h4>шт</h4>
+                                    </div>
+                                    <button type="submit" class="tableright" onclick="add1(1)"><h4>+</h4></button>
+                                </div>
+                                <div class="maincontent_openings maincontent_openings01"></div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div class="top">
+                            <div class="opening">
+                                <h4>Двери</h4>
+                                <img class="iconMini icon02" src="img/radioOFF.png" onclick="proem(2)">
+                            </div>
+                            <div class="cont0002">
+                        
+                                <div class="headtable">
+                                    <div class="tableleft">
+                                        <span class="wrapper">
+                                            <button class="js-minus-btn" type="button">-</button>
+                                            <input class="js-number input002" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn" type="button">+</button>
+                                        </span>
+                                        <h4>шт</h4>
+                                    </div>
+                                    <button type="submit" class="tableright" onclick="add1(2)"><h4>+</h4></button>
+                                </div>
+                                <div class="maincontent_openings maincontent_openings02"></div>
+                            </div>
+                        </div>
+                        <div class="top">
+                            <div class="opening">
+                                <h4>Окна</h4>
+                                <img class="iconMini icon03" src="img/radioOFF.png" onclick="proem(3)">
+                            </div>
+                            <div class="cont0003">
+                        
+                                <div class="headtable">
+                                    <div class="tableleft">
+                                        <span class="wrapper">
+                                            <button class="js-minus-btn" type="button">-</button>
+                                            <input class="js-number input003" type="text" name="number" value="1" min="1">
+                                            <button class="js-plus-btn" type="button">+</button>
+                                        </span>
+                                        <h4>шт</h4>
+                                    </div>
+                                    <button type="submit" class="tableright" onclick="add1(3)"><h4>+</h4></button>
+                                </div>
+                                <div class="maincontent_openings maincontent_openings03"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    
+                    
+                </div>
+
+                
+                <div id="cont03">
+                    <div class="maintext-content">
+                        1) Ваши данные
+                        
+                    </div>
+                    <div class="cont00001">
+                        <div>
+                            <h4>ФИО</h4>
+                            <input type="text"  class="input2 set09">
+                        </div>
+                        <div class="top">
+                            <h4>E-mail</h4>
+                            <input type="text"  class="input2 set10">
+                        </div>
+                        <div class="top">
+                            <h4>Телефон</h4>
+                            <input type="text"  class="input2 set11">
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="maintext-content">
+                        2) Место строительства
+                        
+                    </div>
+                    <div class="line"></div>
+                    <div class="maintext-content">
+                        3) Комментарий
+                        
+                    </div>
+                </div>
+
+                
+                
+                
+            </div>
+            
+            <div class="triangle"></div>
+                <div class="foot-secondcontainer" >
+                    <img src="img\left.png" width="55" id="left" onclick="myFunction(false) ">
+                    <text id="id">
+                        ВНЕШНИИ ВИД
+                    </text>
+                    
+
+                    <img src="img\right.png" width="55" id="right"  onclick="myFunction(true)">
+                </div>
+            
+            
+        </div>
+    </div>
+
+    
+    
+    <div class="answer">
+        <h9 class="h9">Ответ: <br> <br></h9>
+    </div>
+
+
+        
+        
+        
+    
+    
+        
+
+    <script src="js/index.js"></script>
+    
+    
+</body>
+
+</html>
