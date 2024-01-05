@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cansel" onclick="Hiddecontent0()">
+
+    </div>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="img/logo.png">
+            <div class="header-text">
+                <h1>РАССЧИТАТЬ СТОИМОСТЬ</h1>
+                <p>КАЛЬКУЛЯТОР | 3Д МОДЕЛЬ</p>
+            </div>
+        </div>
+        <div class="headerline">
+            <div class="header__bottom-inner landing__inner">
+                <div class="header__bottom-link-wrap">
+                    <a class="step1">1. ВИД ЗДАНИЯ</a>
+                </div>
+                <div class="header__bottom-link-wrap">
+                    <a class="step2">2. КОНСТРУКЦИИ</a>
+                </div>
+                <div class="header__bottom-link-wrap">
+                    <a class="step3">3. О ПОЛУЧАТЕЛЕ</a>
+                </div>  
+            </div>
+
+        </div>
+        
+    </header>
+    <div class="content">
+        <div class="block-name">Кровля</div>
+        <div class="select" onclick="Hiddecontent1()">
+            <img class="type type-content" src="img/type1.png">
+            <span class="select-text select-text1">
+                
+                <div>Укажите тип кровли</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content1">
+            <div class="option" onclick="option(1)">
+                <img class="type" src="img/type2.png">
+                <span class="select-text" >
+                    Односкатная
+                </span>
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+            </div>
+            <div class="option" onclick="option(2)">
+                <img class="type" src="img/type3.png">
+                <span class="select-text" >
+                    Двухскатная
+                </span>
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+            </div>
+            <div class="option" onclick="option(3)">
+                <img class="type" src="img/type1.png">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+            </div>
+        </div>
+
+
+        
+        <div class="select top" onclick="Hiddecontent2()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text2"  >
+                
+                <div>Укажите тип панели кровли</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content2">
+            <div class="option" onclick="option2(1)">
+                <span class="select-text" >
+                    Базальтовые панели
+                </span>
+                
+            </div>
+            <div class="option" onclick="option2(2)">
+                <span class="select-text" >
+                    ПИР панели
+                </span>
+            </div>
+            <div class="option" onclick="option2(3)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="select top" onclick="Hiddecontent3()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text3"  >
+                
+                <div>Укажите толщину <br>по утеплителю панели кровли</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content3">
+            <div class="option" onclick="option3(1)">
+                <span class="select-text" >
+                    50 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option3(2)">
+                <span class="select-text" >
+                    80 мм
+                </span>
+            </div>
+            <div class="option" onclick="option3(3)">
+                <span class="select-text" >
+                    100 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option3(4)">
+                <span class="select-text" >
+                    120 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option3(5)">
+                <span class="select-text" >
+                    150 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option3(6)">
+                <span class="select-text" >
+                    200 мм
+                </span>
+
+            </div>
+            <div class="option" onclick="option3(7)">
+                <span class="select-text" >
+                    250 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option3(8)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="select top" onclick="Hiddecontent4()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text4"  >
+                
+                <div>Укажите толщину<br>облицовки панели кровли</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content4">
+            <div class="option" onclick="option4(1)">
+                <span class="select-text" >
+                    0,5 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option4(2)">
+                <span class="select-text" >
+                    0,6 мм
+                </span>
+            </div>
+            <div class="option" onclick="option4(3)">
+                <span class="select-text" >
+                    0,7 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option4(4)">
+                <span class="select-text" >
+                    0,8 мм
+                </span>
+                
+            </div>
+            
+            <div class="option" onclick="option4(5)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="content2">
+        <div class="block-name">Стены</div>
+        <div class="lent">
+            <input class="len inpt01" type="text" style="border-right: none;" placeholder="Длина стены, м">
+            <input class="len inpt02" type="text" style="border-right: none;" placeholder="Ширина стены, м">
+            <input class="len inpt03" type="text" placeholder="Высота стены, м">
+        </div>
+        <div class="select top" onclick="Hiddecontent5()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text5"  >
+                
+                <div>Укажите тип панели стены</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content5">
+            <div class="option" onclick="option5(1)">
+                <span class="select-text" >
+                    Базальтовые панели
+                </span>
+                
+            </div>
+            <div class="option" onclick="option5(2)">
+                <span class="select-text" >
+                    ПИР панели
+                </span>
+            </div>
+            <div class="option" onclick="option5(3)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="select top" onclick="Hiddecontent6()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text6"  >
+                
+                <div>Укажите толщину <br>по утеплителю панели стены</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content6">
+            <div class="option" onclick="option6(1)">
+                <span class="select-text" >
+                    50 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option6(2)">
+                <span class="select-text" >
+                    80 мм
+                </span>
+            </div>
+            <div class="option" onclick="option6(3)">
+                <span class="select-text" >
+                    100 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option6(4)">
+                <span class="select-text" >
+                    120 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option6(5)">
+                <span class="select-text" >
+                    150 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option6(6)">
+                <span class="select-text" >
+                    200 мм
+                </span>
+
+            </div>
+            <div class="option" onclick="option6(7)">
+                <span class="select-text" >
+                    250 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option6(8)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+
+
+        <div class="select top" onclick="Hiddecontent7()">
+            <img class="type" src="img/variant.png" style="visibility: hidden;">
+            <span class="select-text select-text7"  >
+                
+                <div>Укажите толщину<br>облицовки панели стены</div>
+                
+                
+            </span>
+            <img class="type" src="img/variant.png">
+
+        </div>
+        <div class="option-content option-content7">
+            <div class="option" onclick="option7(1)">
+                <span class="select-text" >
+                    0,5 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option7(2)">
+                <span class="select-text" >
+                    0,6 мм
+                </span>
+            </div>
+            <div class="option" onclick="option7(3)">
+                <span class="select-text" >
+                    0,7 мм
+                </span>
+                
+            </div>
+            <div class="option" onclick="option7(4)">
+                <span class="select-text" >
+                    0,8 мм
+                </span>
+                
+            </div>
+            
+            <div class="option" onclick="option7(5)">
+                <span class="select-text" >
+                    Не выбирать
+                </span>
+                
+            </div>
+        </div>
+
+
+    </div>
+    
+
+    
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
