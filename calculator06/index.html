@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5e75a561-d4d7-4beb-bee4-bc49014a9e89&lang=ru_RU" type="text/javascript"></script>
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    
+</head>
+<body>
+    <div class="cansel" onclick="Hiddecontent0()">
+
+    </div>
+    <header>
+        <div class="header-container">
+            <img class="logo" src="img/logo.png">
+            <div class="header-text">
+                <h1>РАССЧИТАТЬ СТОИМОСТЬ</h1>
+                <p>КАЛЬКУЛЯТОР |</p>
+                <p class="link" >3Д МОДЕЛЬ</p>
+            </div>
+        </div>
+        
+        
+    </header>
+    <div class="headerline">
+            <div class="header__bottom-inner landing__inner">
+                <div class="header__bottom-link-wrap">
+                    <a class="step1" onclick="dontworked()" onclick="step1()">1. ВИД ЗДАНИЯ</a>
+                </div>
+                <div class="header__bottom-link-wrap">
+                    <a class="step2">2. КОНСТРУКЦИИ</a>
+                </div>
+                <div class="header__bottom-link-wrap">
+                    <a class="step3">3. О ПОЛУЧАТЕЛЕ</a>
+                </div>  
+            </div>
+
+        </div>
+    <div class="con1">
+        <div class="content">
+            <span class="block-pred2">*не обязательно</span>
+            <div class="block-name">Кровля</div>
+            <div class="select" onclick="Hiddecontent1()">
+                <img class="type type-content" src="img/type1.png">
+                <span class="select-text select-text1">
+                    
+                    <div>Укажите тип кровли</div>
+                    
+                    
+                </span>
+                <img class="type" src="img/variant.png">
+    
+            </div>
+            <div class="option-content option-content1">
+                <div class="option" onclick="option(1)">
+                    <img class="type" src="img/type2.png">
+                    <span class="select-text" >
+                        Односкатная
+                    </span>
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                </div>
+                <div class="option" onclick="option(2)">
+                    <img class="type" src="img/type3.png">
+                    <span class="select-text" >
+                        Двухскатная
+                    </span>
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                </div>
+                <div class="option" onclick="option(3)">
+                    <img class="type" src="img/type1.png">
+                    <span class="select-text" >
+                        Не выбирать
+                    </span>
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                </div>
+            </div>
+    
+    
+            
+            <div class="addiction">
+                
+                <div class="select top " onclick="Hiddecontent2()">
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                    <span class="select-text select-text2"  >
+                        
+                        <div>Укажите тип панели кровли</div>
+                        
+                        
+                    </span>
+                    <img class="type" src="img/variant.png">
+        
+                </div>
+                <div class="option-content option-content2">
+                    <div class="option" onclick="option2(1)">
+                        <span class="select-text" >
+                            Базальтовые панели
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option2(2)">
+                        <span class="select-text" >
+                            ПИР панели
+                        </span>
+                    </div>
+                    <div class="option" onclick="option2(3)">
+                        <span class="select-text" >
+                            Не выбирать
+                        </span>
+                        
+                    </div>
+                </div>
+        
+                <div class="select top" onclick="Hiddecontent3()">
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                    <span class="select-text select-text3"  >
+                        
+                        <div>Укажите толщину <br>по утеплителю панели кровли</div>
+                        
+                        
+                    </span>
+                    <img class="type" src="img/variant.png">
+        
+                </div>
+                <div class="option-content option-content3">
+                    <div class="option" onclick="option3(1)">
+                        <span class="select-text" >
+                            50 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option3(2)">
+                        <span class="select-text" >
+                            80 мм
+                        </span>
+                    </div>
+                    <div class="option" onclick="option3(3)">
+                        <span class="select-text" >
+                            100 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option3(4)">
+                        <span class="select-text" >
+                            120 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option3(5)">
+                        <span class="select-text" >
+                            150 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option3(6)">
+                        <span class="select-text" >
+                            200 мм
+                        </span>
+        
+                    </div>
+                    <div class="option" onclick="option3(7)">
+                        <span class="select-text" >
+                            250 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option3(8)">
+                        <span class="select-text" >
+                            Не выбирать
+                        </span>
+                        
+                    </div>
+                </div>
+        
+                <div class="select top" onclick="Hiddecontent4()">
+                    <img class="type" src="img/variant.png" style="visibility: hidden;">
+                    <span class="select-text select-text4"  >
+                        
+                        <div>Укажите толщину<br>облицовки панели кровли</div>
+                        
+                        
+                    </span>
+                    <img class="type" src="img/variant.png">
+        
+                </div>
+                <div class="option-content option-content4">
+                    <div class="option" onclick="option4(1)">
+                        <span class="select-text" >
+                            0,5 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option4(2)">
+                        <span class="select-text" >
+                            0,6 мм
+                        </span>
+                    </div>
+                    <div class="option" onclick="option4(3)">
+                        <span class="select-text" >
+                            0,7 мм
+                        </span>
+                        
+                    </div>
+                    <div class="option" onclick="option4(4)">
+                        <span class="select-text" >
+                            0,8 мм
+                        </span>
+                        
+                    </div>
+                    
+                    <div class="option" onclick="option4(5)">
+                        <span class="select-text" >
+                            Не выбирать
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            
+        </div>
+        
+    
+        <div class="content2">
+            
+            <div class="block-name">Стены</div>
+            <div class="lent">
+                <input class="len inpt01" type="text" style="border-right: none;" placeholder="Длина стены, м">
+                <input class="len inpt02" type="text" style="border-right: none;" placeholder="Ширина стены, м">
+                <input class="len inpt03" type="text" placeholder="Высота стены, м">
+            </div>
+            <span class="block-pred">*не обязательно</span>
+            <div class="select top" onclick="Hiddecontent5()">
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+                <span class="select-text select-text5"  >
+                    
+                    <div>Укажите тип панели стены</div>
+                    
+                    
+                </span>
+                <img class="type" src="img/variant.png">
+    
+            </div>
+            <div class="option-content option-content5">
+                <div class="option" onclick="option5(1)">
+                    <span class="select-text" >
+                        Базальтовые панели
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option5(2)">
+                    <span class="select-text" >
+                        ПИР панели
+                    </span>
+                </div>
+                <div class="option" onclick="option5(3)">
+                    <span class="select-text" >
+                        Не выбирать
+                    </span>
+                    
+                </div>
+            </div>
+            <span class="block-pred">*не обязательно</span>
+            <div class="select top" onclick="Hiddecontent6()">
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+                <span class="select-text select-text6"  >
+                    
+                    <div>Укажите толщину <br>по утеплителю панели стены</div>
+                    
+                    
+                </span>
+                <img class="type" src="img/variant.png">
+    
+            </div>
+            <div class="option-content option-content6">
+                <div class="option" onclick="option6(1)">
+                    <span class="select-text" >
+                        50 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option6(2)">
+                    <span class="select-text" >
+                        80 мм
+                    </span>
+                </div>
+                <div class="option" onclick="option6(3)">
+                    <span class="select-text" >
+                        100 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option6(4)">
+                    <span class="select-text" >
+                        120 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option6(5)">
+                    <span class="select-text" >
+                        150 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option6(6)">
+                    <span class="select-text" >
+                        200 мм
+                    </span>
+    
+                </div>
+                <div class="option" onclick="option6(7)">
+                    <span class="select-text" >
+                        250 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option6(8)">
+                    <span class="select-text" >
+                        Не выбирать
+                    </span>
+                    
+                </div>
+            </div>
+    
+    
+            <span class="block-pred">*не обязательно</span>
+            <div class="select top" onclick="Hiddecontent7()">
+                <img class="type" src="img/variant.png" style="visibility: hidden;">
+                <span class="select-text select-text7"  >
+                    
+                    <div>Укажите толщину<br>облицовки панели стены</div>
+                    
+                    
+                </span>
+                <img class="type" src="img/variant.png">
+    
+            </div>
+            <div class="option-content option-content7">
+                <div class="option" onclick="option7(1)">
+                    <span class="select-text" >
+                        0,5 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option7(2)">
+                    <span class="select-text" >
+                        0,6 мм
+                    </span>
+                </div>
+                <div class="option" onclick="option7(3)">
+                    <span class="select-text" >
+                        0,7 мм
+                    </span>
+                    
+                </div>
+                <div class="option" onclick="option7(4)">
+                    <span class="select-text" >
+                        0,8 мм
+                    </span>
+                    
+                </div>
+                
+                <div class="option" onclick="option7(5)">
+                    <span class="select-text" >
+                        Не выбирать
+                    </span>
+                    
+                </div>
+            </div>
+            
+    
+    
+        </div>
+    </div>
+    <div class="con2">
+        
+        <div class="content" style="display:grid;">
+            <span class="block-pred2">*не обязательно</span>
+            <div class="block-name">Пролеты</div>
+            <div class="lent">
+                <input class="len4 inpt04" type="text"  placeholder="Количество пролетов">
+            </div>
+        </div>
+        
+        <div class="top2">
+            <div class="content2" style="display:grid;">
+                <span class="block-pred2">*не обязательно</span>
+                <div class="block-name">Ворота</div>
+                <div class="cont0003">
+                    <div class="lent">
+                        <input class="len sht sht3" type="text" style="border-right: none;" placeholder="Количество">
+                        <input class="len m sh3" type="text" style="border-right: none;" placeholder="Ширина ворот, м">
+                        <input class="len m v3" type="text" placeholder="Высота ворот, м">
+                    </div>
+                </div>
+                
+                <button class="button2" onclick="cont(3)">+</button>
+            </div>
+
+            <div class="content2" style="display:grid;">
+                <span class="block-pred2">*не обязательно</span>
+                <div class="block-name">Двери</div>
+                <div class="cont0001">
+                    <div class="lent">
+                        <input class="len sht sht1" type="text" style="border-right: none;" placeholder="Количество">
+                        <input class="len m sh1" type="text" style="border-right: none;" placeholder="Ширина двери, м">
+                        <input class="len m v1" type="text" placeholder="Высота двери, м">
+                    </div>
+                </div>
+                
+                
+                <button class="button2 " onclick="cont(1)">+</button>
+            </div>
+            <div class="content2" style="display:grid;">
+                <span class="block-pred2">*не обязательно</span>
+                <div class="block-name">Окна</div>
+                <div class="cont0002">
+                    <div class="lent">
+                        <input class="len sht sht2" type="text" style="border-right: none;" placeholder="Количество">
+                        <input class="len m sh2" type="text" style="border-right: none;" placeholder="Ширина окна, м">
+                        <input class="len m v2" type="text" placeholder="Высота окна, м">
+                    </div>
+                </div>
+                
+                <button class="button2" onclick="cont(2)">+</button>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="con3">
+        <div class="content">
+            <div class="block-name bottom">Обратная связь</div>
+            <div class="lent">
+                <input class="len4 inpt16" type="text"  placeholder="Введите настоящее имя">
+            </div>
+            <div class="lent top">
+                <input class="len4 inpt17" type="text"  placeholder="Введите номер телефона">
+            </div>
+            <div class="lent top">
+                <input class="len4 inpt18" type="text"  placeholder="Введите e-mail">
+            </div>
+        </div>
+        <div class="content2">
+            <span class="block-pred2">*не обязательно</span>
+            <div class="block-name">Место строительства</div>
+            <div id="map" class="contmap"></div>
+            <div class="plase">
+                <div class="up">Место строительства: НЕ ВЫБРАНА</div>
+                <div class="plased">Нажмите на карту, чтобы выбрать место строительства</div>
+                
+            </div>
+        </div>
+        
+        <div class="content2">
+            <span class="block-pred2">*не обязательно</span>
+            <div class="block-name">Комментарий</div>
+            <div class="lent">
+                <textarea  placeholder="Например: также, мне нужно ещё..."></textarea>
+            </div>
+            
+            
+        </div>
+
+    </div>
+    
+    
+
+    
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        
+            
+            
+            
+        
+
+        function init() {
+
+            var inputSearch = new ymaps.control.SearchControl({
+                options: {
+                    // Пусть элемент управления будет
+                    // в виде поисковой строки.
+                    size: 'auto',
+                    // Включим возможность искать
+                    // не только топонимы, но и организации.
+                    noPlacemark: true       
+                }
+            })
+            var myPlacemark,
+                myMap = new ymaps.Map('map', {
+                center: [53.28, 69.38],
+                zoom: 12,
+                controls: [inputSearch,'geolocationControl', 'fullscreenControl','zoomControl']
+            });
+        
+        // Результаты поиска будем помещать в коллекцию.
+            
+        // При клике по найденному объекту метка становится красной.
+        
+        // Выбранный результат помещаем в коллекцию.
+            
+
+            
+
+                
+                
+            // Слушаем клик на карте.
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+
+                // Если метка уже создана – просто передвигаем ее.
+                if (myPlacemark) {
+                    
+                    myPlacemark.geometry.setCoordinates(coords);
+                }
+                // Если нет – создаем.
+                else {
+                    
+                    myPlacemark = createPlacemark(coords);
+                    myMap.geoObjects.add(myPlacemark);
+                    // Слушаем событие окончания перетаскивания на метке.
+                    myPlacemark.events.add('dragend', function () {
+                        getAddress(myPlacemark.geometry.getCoordinates());
+                    });
+                }
+                getAddress(coords);
+            });
+
+            // Создание метки.
+            function createPlacemark(coords) {
+                return new ymaps.Placemark(coords, {
+                    iconCaption: 'поиск...'
+                }, {
+                    
+                    draggable: true
+                });
+            }
+
+            // Определяем адрес по координатам (обратное геокодирование).
+            function getAddress(coords) {
+                myPlacemark.properties.set('iconCaption', 'поиск...');
+                ymaps.geocode(coords).then(function (res) {
+                    var firstGeoObject = res.geoObjects.get(0);
+
+                    myPlacemark.properties
+                        .set({
+                            
+                            // Формируем строку с данными об объекте.
+                            iconCaption: [
+                                // Название населенного пункта или вышестоящее административно-территориальное образование.
+                                firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+                                // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
+                                firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+                                
+                            ].filter(Boolean).join(', '),
+                            // В качестве контента балуна задаем строку с адресом объекта.
+                            
+                            
+                            
+                        });
+                        let div = document.createElement('div');
+                        div.className="up";
+                        let div3 = document.createElement('div3');
+                        div3.className="coords";
+                        div3.append("Координаты: ",coords)
+                        div.append(firstGeoObject.getAddressLine(), div3)
+                        
+                        const up = document.querySelector(".up");
+                        up.replaceWith(div);
+                        let div2 = document.createElement('div');
+                        div2.className="down2";
+                        div2.append("Отменить")
+                        div2.addEventListener("click", (event) => {
+                            let div = document.createElement('div');
+                            div.className="up";
+                            div.append("Место строительства: НЕ ВЫБРАНА")
+                            const up = document.querySelector(".up");
+                            up.replaceWith(div);
+                            let div2 = document.createElement('div');
+                            div2.className="plased";
+                            div2.append("Нажмите на карту, чтобы выбрать место строительства");
+                            const down = document.querySelector(".down2");
+                            down.replaceWith(div2);
+                            
+                        });
+                        const down = document.querySelector(".plased");
+                        down.replaceWith(div2);
+                        
+                });
+            }
+        }
+        
+        
+    </script>
+
+    <div style="text-align:center; margin-bottom: 200px;">
+        <button class="button back" onclick="next(false)">
+            НАЗАД
+        </button>
+        <span class="probel"></span>
+        <button class="button next" onclick="next(true)">
+            ВПЕРЕД
+        </button>
+        <button class="button result" onclick="result()">
+            РАССЧИТАТЬ
+        </button>
+        <div class="podskazka con4">
+            Нажимая на 
+            <bytton class="button4">+</bytton>
+            вы добавляете ещё один вариант
+        </div>
+    </div>
+    
+        
+    <div class="answer">
+        <div></div>
+    </div>
+    
+
+    
+
+    
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
