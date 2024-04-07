@@ -41,18 +41,6 @@ const swiperAbout = new Swiper('#about .swiper', {
 
 new Swiper('.projectsSwiper', {
   loop: true,
-
-  direction: 'horizontal',
-
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
   slidesPerView: 1,
   spaceBetween: 10,
   breakpoints: {
@@ -60,7 +48,16 @@ new Swiper('.projectsSwiper', {
       slidesPerView: 2,
       spaceBetween: 30
     },
-  }
+  },
+  direction: 'horizontal',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
 const burgerMenuOpen = document.querySelector("#header .burger-btn");
@@ -72,6 +69,7 @@ burgerMenuOpen.addEventListener("click", () => {
 burgerMenuClose.addEventListener("click", () => {
   document.querySelector("#header .links").classList.remove("show");
 });
+
 const appHeight = () => {
     const doc = document.documentElement
     doc.style.setProperty('--app-height', '${window.innerHeight}px')
