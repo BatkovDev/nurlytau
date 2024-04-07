@@ -848,7 +848,8 @@ img {
 		right: 0;
 		padding: 30px 25px;
 		top: 0;
-		height: 100vh;
+		height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+		height: calc(var(--vh, 1vh) * 100);
 		box-sizing: border-box;
 		transition: .2s right;
 	}
