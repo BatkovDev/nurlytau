@@ -72,3 +72,9 @@ burgerMenuOpen.addEventListener("click", () => {
 burgerMenuClose.addEventListener("click", () => {
   document.querySelector("#header .links").classList.remove("show");
 });
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', '${window.innerHeight}px')
+}
+window.addEventListener('resize', appHeight)
+appHeight()
