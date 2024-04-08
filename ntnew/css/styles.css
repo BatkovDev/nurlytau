@@ -851,7 +851,7 @@ img {
 		background-color: #000000db;
 		border: 1px solid #1f1f1f;
 		border-radius: 12px;
-		right: -100%;
+		display: none;
 		padding: 30px 25px;
 		top: 110%;
 		width: 300px;
@@ -859,8 +859,7 @@ img {
 		box-sizing: border-box;
 	}
 	#header .links.show {
-		right: 50%;
-		transform: translateX(50%);
+		display: flex;
 	}
 	#header .links-list li {
 		display: block;
