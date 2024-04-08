@@ -23,7 +23,7 @@
 }
 body {
 	overflow-x: hidden;
-	max-width: 1440px;
+	max-width: 1900px;
 	margin: 0 auto;
 	background: #080808;
 	color: white;
@@ -39,10 +39,12 @@ img {
 }
 
 
+
 #header {
 	position: sticky;
 	top: 0;
 	z-index: 300;
+	overflow-x: hidden;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -849,6 +851,7 @@ img {
 		padding: 0 var(--padside);
 		background-color: #000000db;
 		border: 1px solid #1f1f1f;
+		border-radius: 12px;
 		right: -100%;
 		padding: 30px 25px;
 		top: 110%;
@@ -872,6 +875,13 @@ img {
 		display: block;
 		align-self: center;
 		margin-left: 10px;
+	}
+}
+@media screen and (min-width: 979px) {
+	.mob-show {
+		display: none;
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 @media screen and (max-width: 850px) {
