@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-  document.querySelector(".feedback-form-btn").addEventListener("click", function () {
+  document.querySelector(".calc-fb-btn").addEventListener("click", function () {
     document.querySelector(".feedback").classList.toggle("open");
   });
 
