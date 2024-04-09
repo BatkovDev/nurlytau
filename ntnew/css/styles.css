@@ -39,6 +39,10 @@ img {
 }
 ul {
 	list-style: none;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
 }
 
 
@@ -1285,7 +1289,7 @@ ul {
 	.faq .advantages ul li,
 	.faq .advantages ul li:nth-child(4n),
 	.faq .advantages ul li:nth-child(5n) {
-		width: unset;
+		width: 100%;
 	}
 	.faq .grid-two-s ul {
 		grid-template-columns: 1fr;
