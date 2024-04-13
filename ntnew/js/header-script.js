@@ -48,6 +48,10 @@ new Swiper('.projectsSwiper', {
       slidesPerView: 2,
       spaceBetween: 30
     },
+    1400: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
   },
   direction: 'horizontal',
   pagination: {
