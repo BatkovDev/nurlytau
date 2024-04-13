@@ -1339,6 +1339,9 @@ ul {
 		display: flex;
 		gap: 15px;
 	}
+	.about .info-item .icon {
+		display: none;
+	}
 	#faq-2 .submit .content p {
 		font-size: 12px;
 	}
