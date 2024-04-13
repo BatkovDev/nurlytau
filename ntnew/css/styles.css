@@ -21,10 +21,13 @@
 	--pal-yellow-2: #f3b220;
 	--pal-black: #000000;
 }
-body {
-	overflow-x: hidden;
+.s-col,
+section {
 	max-width: 1900px;
 	margin: 0 auto;
+}
+body {
+	overflow-x: hidden;
 	background: #080808;
 	color: white;
 }
@@ -635,7 +638,7 @@ ul {
 }
 .services ul li .icon {
 	font-size: 30px;
-	color: #465d69;
+	color: #3a667c;
 }
 .services ul li h3 {
 	font-size: 24px;
@@ -887,11 +890,9 @@ ul {
 	flex-direction:column;
 	align-items:center;
 	background-color: #000000;
-	padding:25px 6.25rem;
 }
 .footer-wrap{
 	display: flex;
-	width: 100%;
 	align-items: center;
 	justify-content: center;
 	column-gap: 15px;
