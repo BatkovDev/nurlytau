@@ -900,6 +900,7 @@ ul {
 	max-width: 1200px;
 	width: 100%;
 	padding: 0 var(--padside);
+	box-sizing: border-box;
 }
 .footer-map{
 	display:flex;
