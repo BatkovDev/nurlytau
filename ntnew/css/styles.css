@@ -390,9 +390,6 @@ ul {
 	background-color: #ffa42c;
 	color: #fff;
 }
-.faq .jobscheme ol li:last-child .sch-icon {
-	background-color: #ff9100;
-}
 .faq .jobscheme ol li .sch-icon .icon {
 	vertical-align: middle;
 }
