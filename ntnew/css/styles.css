@@ -292,7 +292,7 @@ ul {
 	gap: 10px;
 }
 .about .info-item .icon {
-	font-size: clamp(0.9375rem, 0.7031rem + 0.75vw, 1.125rem);
+	font-size: clamp(0.8125rem, 0.6875rem + 0.4vw, 0.9375rem);
 }
 .about .info-item div > * {
 	display: block;
