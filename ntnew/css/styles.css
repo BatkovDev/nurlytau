@@ -302,6 +302,7 @@ ul {
 	color: var(--pal-yellow);
 }
 .about .info-item div > span {
+	line-height: 0.8;
 	font-size: clamp(0.9375rem, 0.8875rem + 0.2vw, 1.125rem);
 }
 
