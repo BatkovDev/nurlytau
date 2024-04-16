@@ -271,7 +271,7 @@ ul {
 	flex: 1;
 }
 .about-descr {
-	font-size: clamp(1.125rem, 1.0917rem + 0.1333vw, 1.25rem);
+	font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.5625rem);
 	margin-bottom: 20px;
 	font-weight: 500;
 }
@@ -582,7 +582,7 @@ ul {
 }
 .faq .lightweight .description {
 	display: block;
-	font-size: clamp(1rem, 0.9271rem + 0.1667vw, 1.125rem);
+	font-size: clamp(1.125rem, 0.9688rem + 0.5vw, 1.5625rem);
 	margin-bottom: 15px;
 	line-height: 1.5;
 }
