@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cordinateMenu"> Адресс: Улица Вернадского</div>
+
+    <div class="selectionMenu">
+      <div class="cross">x</div>
+      <img src="https://nurlytau01.kz/wp-content/themes/nurlytau/assets/img/logo.webp">
+      <div class="contentSelectionMenu">
+        <h2>Стены</h2>
+        <h2>Крыша</h2>
+        <div class="contentforaddOpening">
+        </div>
+        <h2 class="addOpening">Добавить проем</h2>
+        <h2>Отправить проем</h2>
+      </div>
+    </div>
+
+    <div class="settingsMenu">
+      <div class="cross">x</div>
+      <h3>Стены</h3>
+      <div class="contentSettingsMenu">
+        <div class="cover" style="display: none;">
+          <h4>Размер</h4>
+          <div class="contentCover">
+              <div class="contentCoverAlign">
+                <div class="block">
+                    <input class="inputNum" type="text" style="border-right: none;" placeholder=" ">
+                    <label class="placeholder">Длина</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+                <div class="block">
+                    <input class="inputNum" type="text" style="border-right: none;" placeholder=" ">
+                    <label class="placeholder">Ширина</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+                <div class="block">
+                    <input class="inputNum" type="text" placeholder=" ">
+                    <label class="placeholder">Высота</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cover cover2">
+          <h4>Расположение</h4>
+          <div class="contentCover">
+              <div class="contentCoverAlign">
+                <div class="block">
+                  <div class="inputNum2" style="border-right: none;"> Юг</div>
+                </div>
+                <div class="block">
+                  <input class="inputNum input1" type="text" style="border-right: none;" placeholder=" ">
+                  <label class="placeholder">Вверх</label>
+                  <label class="placeholderdown">м</label>
+              </div>
+                <div class="block">
+                    <input class="inputNum input2" type="text" placeholder=" ">
+                    <label class="placeholder">На право</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+                
+                
+            </div>
+          </div>
+        </div>
+        
+        <div class="cover cover3">
+          <h4>Размер</h4>
+          <div class="contentCover">
+              <div class="contentCoverAlign">
+                <div class="halfblock">
+                    <input class="inputNum input3" type="text" style="border-right: none;" placeholder=" ">
+                    <label class="placeholder">Длина</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+                <div class="halfblock">
+                    <input class="inputNum input4" type="text" placeholder=" ">
+                    <label class="placeholder">Высота</label>
+                    <label class="placeholderdown">м</label>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <img class="buttonback" src="back.png">
+
+    <canvas class="canvas"></canvas>
+    
+    <div class="backChooseAnOpening">
+      <div class="ChooseAnOpening">
+        <div class="cross cross3">x</div>
+        <h1>Выберите проем</h1>
+        <img class="Opening Opening1" src="door.png">
+        <img class="Opening Opening2" src="window.png">
+      </div>
+    </div>
+
+    <div class="backChooseAnSide">
+      <div class="ChooseAnOpening">
+        <div class="cross">x</div>
+        <h1>Выберите сторону</h1>
+        <div class="sideBlock">
+          <button class="buttonSide">Северная</button>
+          <div style="display: flex;
+          align-items: center;
+          justify-content: center;">
+            <button class="buttonSide">Западная</button>
+            <img class="imgSide" src="side.png">
+            <button class="buttonSide">Восточная</button>
+          </div>
+          <button class="buttonSide">Южная</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
