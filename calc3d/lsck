@@ -1,0 +1,32 @@
+console.log(draggable.userData.side)
+        document.querySelector('.inputNum2').innerText=draggable.userData.side
+        document.querySelector('.cover2').style.display="block"
+        document.querySelector('.cover3').style.display="block"
+        if(draggable.userData.side=="запад"){
+            document.querySelector('.input2').value=draggable.position.x-(draggable.scale.x/2)+Bx
+            document.querySelector('.input1').value=draggable.position.y-(draggable.scale.y/2)-Bz
+        }else if(draggable.userData.side=="север"){
+            document.querySelector('.input2').value=draggable.position.z-(draggable.scale.x/2)+By
+            document.querySelector('.input1').value=draggable.position.y-(draggable.scale.y/2)-Bz
+        }else if(draggable.userData.side=="восток"){
+            document.querySelector('.input2').value=-draggable.position.x-(draggable.scale.x/2)+Bx
+            document.querySelector('.input1').value=draggable.position.y-(draggable.scale.y/2)-Bz
+        }else if(draggable.userData.side=="юг"){
+            document.querySelector('.input2').value=-draggable.position.z-(draggable.scale.x/2)+By
+            document.querySelector('.input1').value=draggable.position.y-(draggable.scale.y/2)-Bz
+        }
+        console.log(draggable.scale.x/2)
+        document.querySelector('.input2').id=draggable.userData.name
+        document.querySelector('.input2').onchange = zinput2
+
+        document.querySelector('.input1').id=draggable.userData.name
+        document.querySelector('.input1').onchange = zinput1
+
+        document.querySelector('.input3').value=draggable.scale.x
+        document.querySelector('.input4').value=draggable.scale.y
+
+        document.querySelector('.input3').id=draggable.userData.name
+        document.querySelector('.input3').onchange = zinput3
+
+        document.querySelector('.input4').id=draggable.userData.name
+        document.querySelector('.input4').onchange = zinput4
