@@ -13,9 +13,9 @@ const sizes = {
 };
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-camera.position.z=3.5
-camera.position.x=7
-camera.position.y=3.5
+camera.position.z=8
+camera.position.x=12.5
+camera.position.y=15.5
 
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
@@ -44,36 +44,36 @@ pointlight6.position.set(0,-100,0)
 scene.add(pointlight6)
 
 // Обьект
-let Ax=-2;
-let Ay=1;
-let Az=0;
-let Bx=2;
-let By=1;
-let Bz=0;
-let Cx=2;
-let Cy=-1;
-let Cz=0;
-let Dx=-2;
-let Dy=-1;
-let Dz=0;
-let Ax1=-2;
-let Ay1=1;
-let Az1=1;
-let Bx1=2;
-let By1=1;
-let Bz1=1;
-let Cx1=2;
-let Cy1=-1;
-let Cz1=1;
-let Dx1=-2;
-let Dy1=-1;
-let Dz1=1;
-let Px=-2;
-let Py=0;
-let Pz=2;
-let Px1=2;
-let Py1=0;
-let Pz1=2;
+let Ax=-5;
+        let Ay=3;
+        let Az=0;
+        let Bx=5;
+        let By=3;
+        let Bz=0;
+        let Cx=5;
+        let Cy=-3;
+        let Cz=0;
+        let Dx=-5;
+        let Dy=-3;
+        let Dz=0;
+        let Ax1=-5;
+        let Ay1=3;
+        let Az1=4;
+        let Bx1=5;
+        let By1=3;
+        let Bz1=4;
+        let Cx1=5;
+        let Cy1=-3;
+        let Cz1=4;
+        let Dx1=-5;
+        let Dy1=-3;
+        let Dz1=4;
+        let Px=-5;
+        let Py=0;
+        let Pz=4.6;
+        let Px1=5;
+        let Py1=0;
+        let Pz1=4.6;
 
 const geometry = new THREE.BufferGeometry();
 const material = new THREE.MeshStandardMaterial({ color: "white",metalness: 0.8,roughness: 0.95, side: THREE.DoubleSide});
@@ -281,15 +281,16 @@ controls2.addEventListener('dragging-changed', (e) =>{
 controls2.showZ = false
 
 const geometryDoor = new THREE.BoxGeometry( 1, 1, 1 ); 
-    const materialDoor = new THREE.MeshLambertMaterial({color: "#1e5945", transparent: true, opacity: 0.5});
-    const door = new THREE.Mesh( geometryDoor, materialDoor ); 
-    door.transparent = true
-    door.scale.x=7
-    door.scale.y=0.4
-    door.scale.z=7
-    door.position.y=-0.2
-    scene.add(door)
+const materialDoor = new THREE.MeshLambertMaterial({color: "#1e5945", transparent: true, opacity: 0.5});
+const earth = new THREE.Mesh( geometryDoor, materialDoor ); 
+earth.transparent = true
+earth.scale.x=15
+earth.scale.y=0.4
+earth.scale.z=15
+earth.position.y=-0.2
+scene.add(earth)
 let numberdoor=1
+
 function createDoor() {
     
     let h2 = document.createElement('h2');
@@ -301,11 +302,11 @@ function createDoor() {
     const geometryDoor = new THREE.BoxGeometry( 1, 1, 1 ); 
     const materialDoor = new THREE.MeshBasicMaterial( {color: "black"} ); 
     const door = new THREE.Mesh( geometryDoor, materialDoor ); 
-    door.scale.x=0.4
-    door.scale.y=0.7
+    door.scale.x=0.8
+    door.scale.y=1.2
     door.scale.z=0.05
     door.position.z= By + 0.026
-    door.position.y=0.35
+    door.position.y=0.6
     scene.add(door)
     door.userData.draggable = true
     door.userData.number = numberdoor
@@ -330,11 +331,11 @@ function createWindow() {
     const geometryDoor = new THREE.BoxGeometry( 1, 1, 1 ); 
     const materialDoor = new THREE.MeshBasicMaterial( {color: "#4C67A8"} ); 
     const door = new THREE.Mesh( geometryDoor, materialDoor ); 
-    door.scale.x=0.4
-    door.scale.y=0.4
+    door.scale.x= 0.8
+    door.scale.y= 1.2
     door.scale.z=0.05
     door.position.z= By + 0.026
-    door.position.y=0.35
+    door.position.y=0.6
     scene.add(door)
     door.userData.draggable = true
     door.userData.number = numberwindow
@@ -621,6 +622,7 @@ document.querySelector('.input5').addEventListener("change", (event) => {
 
     
     let length = document.querySelector('.input5').value.replace(/,/,'.');
+    let width = document.querySelector('.input6').value.replace(/,/,'.');
     let l = length/2;
     Bx=l;
     Bx1=l;
@@ -628,6 +630,15 @@ document.querySelector('.input5').addEventListener("change", (event) => {
     Cx1=l;
     Cx=l;
 
+    console.log(length>width)
+    if(length>width){
+        earth.scale.x=length*1+5
+        earth.scale.z=length*1+5
+    }else{
+        earth.scale.x=width*1+5
+        earth.scale.z=width*1+5
+    }
+    
     Ax=-l;
     Ax1=-l;
     Px=-l;
@@ -778,7 +789,13 @@ let oneroof = false
 document.querySelector(".input6").addEventListener("change", (event) => {
     
     let width = document.querySelector('.input6').value.replace(/,/,'.');
+    let length = document.querySelector('.input5').value.replace(/,/,'.');
+    let height = document.querySelector('.input7').value.replace(/,/,'.');
+    let h = height*1;
     let w = width/2;
+    find=0.1*width;
+    Pz=h+find;
+    Pz1=h+find;
     Ay=w;
     By=w;
     By1=w;
@@ -787,6 +804,14 @@ document.querySelector(".input6").addEventListener("change", (event) => {
     Dy=-w;
     Cy1=-w;
     Dy1=-w;
+    if(length>width){
+        earth.scale.x=length*1+5
+        earth.scale.z=length*1+5
+    }else{
+        earth.scale.x=width*1+5
+        earth.scale.z=width*1+5
+    }
+    
 
     if(oneroof){
         const vertices5 = new Float32Array( [
@@ -932,7 +957,7 @@ document.querySelector(".input6").addEventListener("change", (event) => {
         }
     }
 });
-
+let find=0.6;
 
 document.querySelector(".input7").addEventListener("change", (event) => {
     let height = document.querySelector('.input7').value.replace(/,/,'.');
@@ -942,8 +967,8 @@ document.querySelector(".input7").addEventListener("change", (event) => {
     Cz1=h;
     Dz1=h;
 
-    Pz=h+1;
-    Pz1=h+1;
+    Pz=h+find;
+    Pz1=h+find;
 
     if(oneroof){
 
@@ -1204,6 +1229,36 @@ document.querySelector('.color3').addEventListener("click", (event) => {
     mesh4.material.color = {r: 0, g: 0, b: 0}
     mesh7.material.color = {r: 0, g: 0, b: 0}
     mesh8.material.color = {r: 0, g: 0, b: 0}
+    console.log( Ax,
+        Ay,
+        Az,
+        Bx,
+        By,
+        Bz,
+        Cx,
+        Cy,
+        Cz,
+        Dx,
+        Dy,
+        Dz,
+        Ax1,
+        Ay1,
+        Az1,
+        Bx1,
+        By1,
+        Bz1,
+        Cx1,
+        Cy1,
+        Cz1,
+        Dx1,
+        Dy1,
+        Dz1,
+        Px,
+        Py,
+        Pz,
+        Px1,
+        Py1,
+        Pz1,)
 })
 
 document.querySelector('.wall').addEventListener("click", (event) => {
