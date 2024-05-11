@@ -2,6 +2,7 @@ import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 import { OrbitControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js'
 import { TransformControls } from 'https://unpkg.com/three@0.127.0/examples/jsm/controls/TransformControls.js';
 
+location.href=window.location.pathname+"#h=10%6%4#c=1#p=1%1%1#r=1#p=1%1%1"
 console.log("worked");
 const scene = new THREE.Scene();
 const canvas = document.querySelector('.canvas');
@@ -630,8 +631,7 @@ document.querySelector('.input5').addEventListener("change", (event) => {
     Cx1=l;
     Cx=l;
 
-    console.log(length>width)
-    if(length>width){
+    if(length*1>width*1){
         earth.scale.x=length*1+5
         earth.scale.z=length*1+5
     }else{
@@ -804,10 +804,12 @@ document.querySelector(".input6").addEventListener("change", (event) => {
     Dy=-w;
     Cy1=-w;
     Dy1=-w;
-    if(length>width){
+    if(length*1>width*1){
+        console.log('hi')
         earth.scale.x=length*1+5
         earth.scale.z=length*1+5
     }else{
+        console.log('hi2')
         earth.scale.x=width*1+5
         earth.scale.z=width*1+5
     }
@@ -1229,36 +1231,6 @@ document.querySelector('.color3').addEventListener("click", (event) => {
     mesh4.material.color = {r: 0, g: 0, b: 0}
     mesh7.material.color = {r: 0, g: 0, b: 0}
     mesh8.material.color = {r: 0, g: 0, b: 0}
-    console.log( Ax,
-        Ay,
-        Az,
-        Bx,
-        By,
-        Bz,
-        Cx,
-        Cy,
-        Cz,
-        Dx,
-        Dy,
-        Dz,
-        Ax1,
-        Ay1,
-        Az1,
-        Bx1,
-        By1,
-        Bz1,
-        Cx1,
-        Cy1,
-        Cz1,
-        Dx1,
-        Dy1,
-        Dz1,
-        Px,
-        Py,
-        Pz,
-        Px1,
-        Py1,
-        Pz1,)
 })
 
 document.querySelector('.wall').addEventListener("click", (event) => {
