@@ -1,0 +1,32 @@
+const hash = window.location.hash.substring(1).split("%");
+
+const length=document.querySelector(".input5").value = parseInt(hash[0]);
+const width=document.querySelector(".input6").value = parseInt(hash[1]);
+const height=document.querySelector(".input7").value = parseInt(hash[2]);
+
+if (hash[9]) {
+    oneroof = true;
+    scene.remove(mesh6);
+}
+
+const w = width / 2;
+const l = length / 2;
+
+let Az = 0, Py1 = 0, Py = 0, Pz = 0.1*width+height, Pz1 = 0.1*width+height, Dz = 0, Cz = 0, Bz = 0, Az1 = height, Bz1 = height, Cz1 = height, Dz1 = height, Ay = w, By = w, By1 = w, Ay1 = w, Cy = -w, Dy = -w, Cy1 = -w, Dy1 = -w, Bx = l, Bx1 = l, Px1 = l, Cx1 = l, Cx = l, Ax = -l, Ax1 = -l, Px = -l, Dx1 = -l, Dx = -l;
+
+const geometryDoor = new THREE.BoxGeometry(1, 1, 1); 
+const materialDoor = new THREE.MeshLambertMaterial({color: "#1e5945", transparent: true, opacity: 0.5});
+const earth = new THREE.Mesh(geometryDoor, materialDoor);
+earth.transparent = true;
+earth.scale.y = 0.4;
+
+if (length > width) {
+    earth.scale.x = length + 5;
+    earth.scale.z = length + 5;
+} else {
+    earth.scale.x = width + 5;
+    earth.scale.z = width + 5;
+}
+
+earth.position.y = -0.2;
+scene.add(earth);
